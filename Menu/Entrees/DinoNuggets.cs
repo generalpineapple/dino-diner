@@ -6,12 +6,15 @@ namespace DinoDiner.Menu.Entrees
     {
         public double Price { get; set; }
         public uint Calories { get; set; }
+        private int nuggets = 6;
 
         public List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Chicken Nugget", "Chicken Nugget", "Chicken Nugget", "Chicken Nugget", "Chicken Nugget", "Chicken Nugget" };
+                List<string> ingredients = new List<string>() { };
+                for(int i = 0; i < nuggets; i ++)
+                    Ingredients.Add("Chicken Nugget");
                 return ingredients;
             }
         }
@@ -19,13 +22,14 @@ namespace DinoDiner.Menu.Entrees
         public DinoNuggets()
         {
             this.Price = 4.25;
-            this.Calories = 59;
+            this.Calories = 59 * 6;
         }
 
         public void AddNugget()
         {
-            this.Ingredients.Add("Chicken Nugget");
+            nuggets++;
             this.Price += .25;
+            this.Calories += 59;
         }
 
     }

@@ -39,7 +39,7 @@ namespace DinoDiner.Menu.Entrees
             this.dressing = false;
         }
 
-        public void holdCheese()
+        public void HoldCheese()
         {
             this.cheese = false;
         }
