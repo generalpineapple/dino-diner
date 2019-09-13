@@ -12,9 +12,9 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() { };
+                List<string> ingredients = new List<string>();
                 for(int i = 0; i < nuggets; i ++)
-                    Ingredients.Add("Chicken Nugget");
+                    ingredients.Add("Chicken Nugget");
                 return ingredients;
             }
         }
