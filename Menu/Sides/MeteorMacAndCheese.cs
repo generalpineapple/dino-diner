@@ -4,7 +4,11 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-    class MeteorMacAndCheese : Side
+    public class MeteorMacAndCheese : Side
     {
+        public MeteorMacAndCheese()
+        {
+
+        }
     }
 }

@@ -4,7 +4,11 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-    class Triceritots : Side
+    public class Triceritots : Side
     {
+        public Triceritots()
+        {
+
+        }
     }
 }

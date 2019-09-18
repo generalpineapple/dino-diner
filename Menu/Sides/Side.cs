@@ -27,12 +27,12 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// Gets the ingredients list
         /// </summary>
-        public List<string> Ingredients { get; }
+        public abstract List<string> Ingredients { get; }
 
         /// <summary>
         /// Gets or sets the size
         /// </summary>
-        public Size Size { get; set; }
+        public abstract Size Size { get; set; }
 
     }
 }
