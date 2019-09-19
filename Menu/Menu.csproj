@@ -6,12 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Sides\MeteorMacAndCheese.cs" />
-    <Compile Remove="Sides\MezzorellaSticks.cs" />
-    <Compile Remove="Sides\Triceritots.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Milestones\" />
   </ItemGroup>
 
