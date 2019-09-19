@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
         private bool peppers = true;
         private bool onions = true;
 
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

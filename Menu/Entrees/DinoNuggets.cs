@@ -6,7 +6,7 @@ namespace DinoDiner.Menu.Entrees
     {
         private int nuggets = 6;
 
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

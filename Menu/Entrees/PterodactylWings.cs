@@ -4,7 +4,7 @@ namespace DinoDiner.Menu.Entrees
 {
     public class PterodactylWings : Entree
     {
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
