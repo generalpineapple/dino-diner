@@ -4,6 +4,9 @@ namespace DinoDiner.Menu.Entrees
 {
     public class PterodactylWings : Entree
     {
+        /// <summary>
+        /// List of ingredients on their selected entree
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -13,6 +16,10 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// Constructor for class
+        /// sets Price and Calories
+        /// </summary>
         public PterodactylWings()
         {
             this.Price = 7.21;

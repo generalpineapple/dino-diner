@@ -6,6 +6,9 @@ namespace DinoDiner.Menu.Sides
 {
     public class Fryceritops : Side
     {
+        /// <summary>
+        /// List of ingredients on their selected side
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -14,7 +17,14 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// this declares the enum size
+        /// </summary>
         private Size size;
+        /// <summary>
+        /// When changing the size, this method will 
+        /// update the Price and Calories of the side
+        /// </summary>
         public override Size Size
         {
             set
@@ -42,6 +52,9 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// A constructor that sets the default price and calories to size small
+        /// </summary>
         public Fryceritops()
         {
             Price = 0.99;
