@@ -28,7 +28,7 @@ namespace DinoDiner.Menu.Drinks
         private Size size;
         /// <summary>
         /// When changing the size, this method will 
-        /// update the Price and Calories of the side
+        /// update the Price and Calories of the item
         /// </summary>
         public override Size Size
         {
