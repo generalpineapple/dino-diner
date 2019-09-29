@@ -6,8 +6,8 @@ namespace DinoDiner.Menu.Drinks
 {
     public class JurrasicJava : Drink
     {
-        private bool RoomForCream = false;
-        private bool Decaf = false;
+        public bool RoomForCream = false;
+        public bool Decaf = false;
 
         /// <summary>
         /// comstructor sets ice to false and default size

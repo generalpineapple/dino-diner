@@ -9,6 +9,12 @@ namespace DinoDiner.Menu.Drinks
         public bool Sweet = false;
         public bool Lemon = false;
 
+        public Tyrannotea()
+        {
+            Price = .99;
+            Calories = 8;
+        }
+
         /// <summary>
         /// List of ingredients
         /// </summary>
@@ -79,6 +85,7 @@ namespace DinoDiner.Menu.Drinks
         public void AddSweet()
         {
             Sweet = true;
+            Size = size;
         }
 
     }

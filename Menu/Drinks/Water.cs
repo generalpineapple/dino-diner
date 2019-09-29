@@ -6,7 +6,7 @@ namespace DinoDiner.Menu.Drinks
 {
     public class Water : Drink
     {
-        private bool Lemon = false;
+        public bool Lemon = false;
 
         public Water()
         {
@@ -28,5 +28,10 @@ namespace DinoDiner.Menu.Drinks
         }
 
         public override Size Size { get; set; }
+
+        public void AddLemon()
+        {
+            Lemon = true;
+        }
     }
 }
