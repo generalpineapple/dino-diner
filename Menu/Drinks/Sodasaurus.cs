@@ -58,7 +58,9 @@ namespace DinoDiner.Menu.Drinks
         }
 
 
-
+        /// <summary>
+        /// Sets default Price and Calories
+        /// </summary>
         public Sodasaurus()
         {
             Price = 1.50;

@@ -65,16 +65,25 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// Allows for Decaf coffee
+        /// </summary>
         public void MakeDecaf()
         {
             Decaf = true;
         }
 
+        /// <summary>
+        /// Allows the customer to add their own cream
+        /// </summary>
         public void LeaveRoomForCream()
         {
             RoomForCream = true;
         }
 
+        /// <summary>
+        /// Adds ice to their coffee
+        /// </summary>
         public void AddIce()
         {
             Ice = true;

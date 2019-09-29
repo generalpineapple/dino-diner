@@ -8,6 +8,9 @@ namespace DinoDiner.Menu.Drinks
     {
         public bool Lemon = false;
 
+        /// <summary>
+        /// sets Price and Calories
+        /// </summary>
         public Water()
         {
             Price = .10;
@@ -27,8 +30,14 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// Allows to set and get Size
+        /// </summary>
         public override Size Size { get; set; }
 
+        /// <summary>
+        /// Adds Lemon to the water
+        /// </summary>
         public void AddLemon()
         {
             Lemon = true;
