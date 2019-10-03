@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
-    public class JurrasicJava : Drink
+    public class JurassicJava: Drink
     {
         public bool RoomForCream = false;
         public bool Decaf = false;
@@ -12,7 +12,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// comstructor sets ice to false and default size
         /// </summary>
-        public JurrasicJava()
+        public JurassicJava()
         {
             Ice = false;
             Price = 0.59;

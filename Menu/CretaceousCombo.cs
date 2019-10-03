@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DinoDiner.Menu.Entrees;
-using DinoDiner.Menu.Drinks;
-using DinoDiner.Menu.Sides;
+using DinoDiner.Menu;
 
 namespace DinoDiner.Menu
 {
-    public class CretaciousCombo
+    public class CretaceousCombo
     {
         public Entree Entree { get; set; }
         public Drink Drink { get; set; }
@@ -46,9 +44,9 @@ namespace DinoDiner.Menu
             }
         }
 
-        private CretaciousCombo() { }
+        private CretaceousCombo() { }
 
-        public CretaciousCombo(Entree entree)
+        public CretaceousCombo(Entree entree)
         {
             Entree = entree;
             Side = new Fryceritops();

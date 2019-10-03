@@ -1,6 +1,5 @@
 ﻿using Xunit;
 using DinoDiner.Menu;
-using DinoDiner.Menu.Drinks;
 
 namespace MenuTest.Drinks
 {
@@ -10,35 +9,35 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveDefaultPrice()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             Assert.Equal(0.59, jj.Price, 2);
         }
 
         [Fact]
         public void ShouldHaveDefaultCalories()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             Assert.Equal<uint>(2, jj.Calories);
         }
 
         [Fact]
         public void ShouldHaveIceAsDefault()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             Assert.False(jj.Ice);
         }
 
         [Fact]
         public void ShouldHaveDefaultSize()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             Assert.Equal<Size>(Size.Small, jj.Size);
         }
 
         [Fact]
         public void ShouldHaveDefaultSpaceForCream()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             Assert.False(jj.RoomForCream);
         }
 
@@ -47,7 +46,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveSmallPrice()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.Size = Size.Small;
             Assert.Equal(0.59, jj.Price, 2);
         }
@@ -55,7 +54,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveMediumPrice()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.Size = Size.Medium;
             Assert.Equal(.99, jj.Price, 2);
         }
@@ -63,7 +62,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveLargePrice()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.Size = Size.Large;
             Assert.Equal(1.49, jj.Price, 2);
         }
@@ -71,7 +70,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveSmallCalories()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.Size = Size.Small;
             Assert.Equal<uint>(2, jj.Calories);
         }
@@ -79,7 +78,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveMediumCalories()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.Size = Size.Medium;
             Assert.Equal<uint>(4, jj.Calories);
         }
@@ -87,7 +86,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveLargeCalories()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.Size = Size.Large;
             Assert.Equal<uint>(8, jj.Calories);
         }
@@ -97,7 +96,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldAddIce()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.AddIce();
             Assert.True(jj.Ice);
         }
@@ -107,7 +106,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldLeaveRoomForCream()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             jj.LeaveRoomForCream();
             Assert.True(jj.RoomForCream);
         }
@@ -117,7 +116,7 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveCorrectIngredients()
         {
-            JurrasicJava jj = new JurrasicJava();
+            JurassicJava jj = new JurassicJava();
             Assert.Contains("Water", jj.Ingredients);
             Assert.Contains("Coffee", jj.Ingredients);
             Assert.Equal(2, jj.Ingredients.Count);
