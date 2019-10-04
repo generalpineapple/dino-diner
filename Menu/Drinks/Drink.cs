@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public abstract class  Drink
+    public abstract class  Drink : IMenuItem
     {
         /// <summary>
         /// an abstract variable to set and get size of drink

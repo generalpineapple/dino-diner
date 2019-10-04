@@ -70,5 +70,13 @@ namespace DinoDiner.Menu
             this.mustard = false;
         }
 
+        /// <summary>
+        /// overrides the ToString function to return the item
+        /// </summary>
+        /// <returns>Steakosaurus Burger</returns>
+        public override string ToString()
+        {
+            return "Steakosaurus Burger";
+        }
     }
 }

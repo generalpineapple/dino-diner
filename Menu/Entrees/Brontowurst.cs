@@ -60,6 +60,15 @@ namespace DinoDiner.Menu
             this.onions = false;
         }
 
+        /// <summary>
+        /// overrides the ToString function to return the item
+        /// </summary>
+        /// <returns>Brontowurst</returns>
+        public override string ToString()
+        {
+            return "Brontowurst";
+        }
+
     }
 }
 

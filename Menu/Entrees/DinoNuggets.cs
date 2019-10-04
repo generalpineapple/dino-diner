@@ -44,5 +44,13 @@ namespace DinoDiner.Menu
             this.Calories += 59;
         }
 
+        /// <summary>
+        /// overrides the ToString function to return the item
+        /// </summary>
+        /// <returns>Dino-Nuggets</returns>
+        public override string ToString()
+        {
+            return "Dino-Nuggets";
+        }
     }
 }

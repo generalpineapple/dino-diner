@@ -88,5 +88,13 @@ namespace DinoDiner.Menu
             Size = size;
         }
 
+        /// <summary>
+        /// overrides the ToString function to return the size and the item
+        /// </summary>
+        /// <returns>The size and Tyrannotea</returns>
+        public override string ToString()
+        {
+            return $"{size.ToString()} Tyrannotea";
+        }
     }
 }

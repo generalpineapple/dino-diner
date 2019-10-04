@@ -66,5 +66,14 @@ namespace DinoDiner.Menu
             Price = 1.50;
             Calories = 112;
         }
+
+        /// <summary>
+        /// overrides the ToString function to return the size and the item
+        /// </summary>
+        /// <returns>The size and Sodasaurus</returns>
+        public override string ToString()
+        {
+            return $"{size.ToString()} {Flavor.ToString()} Sodasaurus";
+        }
     }
 }

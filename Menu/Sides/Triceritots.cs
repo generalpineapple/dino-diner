@@ -60,5 +60,14 @@ namespace DinoDiner.Menu
             Price = 0.99;
             Calories = 352;
         }
+
+        /// <summary>
+        /// overrides the ToString function to return the size and the item
+        /// </summary>
+        /// <returns>The size and Triceritots</returns>
+        public override string ToString()
+        {
+            return size.ToString() + " Triceritots";
+        }
     }
 }

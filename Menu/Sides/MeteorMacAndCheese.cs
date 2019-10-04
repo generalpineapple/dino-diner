@@ -61,5 +61,14 @@ namespace DinoDiner.Menu
             Price = 0.99;
             Calories = 420;
         }
+
+        /// <summary>
+        /// overrides the ToString function to return the size and the item
+        /// </summary>
+        /// <returns>The size and Meteor Mac and Cheese</returns>
+        public override string ToString()
+        {
+            return size.ToString() + " Meteor Mac and Cheese";
+        }
     }   
 }

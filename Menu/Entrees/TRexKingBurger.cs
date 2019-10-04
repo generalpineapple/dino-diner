@@ -110,5 +110,14 @@ namespace DinoDiner.Menu
         {
             this.tomato = false;
         }
+
+        /// <summary>
+        /// overrides the ToString function to return the item
+        /// </summary>
+        /// <returns>T-Rex King Burger</returns>
+        public override string ToString()
+        {
+            return "T-Rex King Burger";
+        }
     }
 }

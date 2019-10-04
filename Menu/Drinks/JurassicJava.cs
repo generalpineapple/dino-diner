@@ -88,5 +88,17 @@ namespace DinoDiner.Menu
         {
             Ice = true;
         }
+
+        /// <summary>
+        /// overrides the ToString function to return the size and the item and whether its decaf
+        /// </summary>
+        /// <returns>The size and either decaf or just Jurassic Java</returns>
+        public override string ToString()
+        {
+            if (Decaf)
+                return size.ToString() + " Decaf Jurassic Java";
+            else
+                return size.ToString() + " Jurassic Java";
+        }
     }
 }
