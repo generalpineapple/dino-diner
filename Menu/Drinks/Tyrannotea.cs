@@ -94,7 +94,10 @@ namespace DinoDiner.Menu
         /// <returns>The size and Tyrannotea</returns>
         public override string ToString()
         {
-            return $"{size.ToString()} Tyrannotea";
+            if(Sweet)
+                return $"{size.ToString()} Sweet Tyrannotea";
+            else
+                return $"{size.ToString()} Tyrannotea";
         }
     }
 }

@@ -4,7 +4,6 @@ using DinoDiner.Menu;
 
 namespace MenuTest
 {
-    /*
     public class ImmutableIngredientsTest
     {
         [Theory]
@@ -32,5 +31,4 @@ namespace MenuTest
         }
         
     }
-    */
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    interface IMenuItem
+    public interface IMenuItem
     {
         double Price { get; }
         uint Calories { get; }

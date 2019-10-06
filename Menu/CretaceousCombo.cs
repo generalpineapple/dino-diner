@@ -55,7 +55,7 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return $"{Entree.ToString()} with a {Side.ToString()} and a {Drink.ToString()}";
+            return $"{Entree.ToString()} Combo";
         }
     }
 }
