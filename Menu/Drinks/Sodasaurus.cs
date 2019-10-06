@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* Sodasaurus.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for soda
+    /// </summary>
     public class Sodasaurus : Drink
     {
         /// <summary>

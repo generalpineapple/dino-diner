@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* JurassicJava.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for coffee
+    /// </summary>
     public class JurassicJava: Drink
     {
         public bool RoomForCream = false;

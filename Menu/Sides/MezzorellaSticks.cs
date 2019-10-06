@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* MezzorellaSticks.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for Mozzarella sticks
+    /// </summary>
     public class MezzorellaSticks : Side
     {
         /// <summary>

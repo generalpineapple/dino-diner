@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* VelociWrap.cs
+ * Author: Colden Miller
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu
 {

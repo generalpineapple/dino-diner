@@ -1,4 +1,7 @@
-﻿using Xunit;
+﻿/* JurassicJavaTest.cs
+ * Author: Colden Miller
+ */
+using Xunit;
 using DinoDiner.Menu;
 
 namespace MenuTest.Drinks

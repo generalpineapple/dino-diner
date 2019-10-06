@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* Drink.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// abstract class for drinks
+    /// </summary>
     public abstract class  Drink : IMenuItem
     {
         /// <summary>

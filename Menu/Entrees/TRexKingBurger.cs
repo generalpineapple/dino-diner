@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* TRexKingBurger.cs
+ * Author: Colden Miller
+ */
+using System.Collections.Generic;
 
 
 namespace DinoDiner.Menu

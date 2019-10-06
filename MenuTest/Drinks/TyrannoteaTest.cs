@@ -1,4 +1,7 @@
-﻿using Xunit;
+﻿/* TyrannoteaTest.cs
+ * Author: Colden Miller
+ */
+ using Xunit;
 using DinoDiner.Menu;
 
 namespace MenuTest.Drinks

@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* Fryceritops.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for fries
+    /// </summary>
     public class Fryceritops : Side
     {
         /// <summary>

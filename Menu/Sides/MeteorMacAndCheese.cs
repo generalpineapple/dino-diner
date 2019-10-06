@@ -1,10 +1,15 @@
-﻿using System;
+﻿/* MeteorMacAndCheese.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
-
+    /// <summary>
+    /// class for Mac and Cheese
+    /// </summary>
     public class MeteorMacAndCheese : Side
     {
         /// <summary>

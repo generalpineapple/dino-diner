@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* Brontowurst.cs
+ * Author: Colden Miller
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu
 {

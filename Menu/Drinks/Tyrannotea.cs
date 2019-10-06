@@ -1,14 +1,23 @@
-﻿using System;
+﻿/* Tyrannotea.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for tea
+    /// </summary>
     public class Tyrannotea : Drink
     {
         public bool Sweet = false;
         public bool Lemon = false;
 
+        /// <summary>
+        /// constructor for Tyrannotea
+        /// </summary>
         public Tyrannotea()
         {
             Price = .99;

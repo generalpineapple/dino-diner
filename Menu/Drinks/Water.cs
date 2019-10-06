@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* Water.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for water
+    /// </summary>
     public class Water : Drink
     {
         public bool Lemon = false;

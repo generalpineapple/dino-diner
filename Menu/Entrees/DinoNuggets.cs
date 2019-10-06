@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* DinoNuggets.cs
+ * Author: Colden Miller
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu
 {

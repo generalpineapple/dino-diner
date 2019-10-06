@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* SodasaurusFlavor.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

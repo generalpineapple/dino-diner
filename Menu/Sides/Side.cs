@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* Side.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// an abstract class for sides
+    /// </summary>
     public abstract class Side : IMenuItem
     {
         /// <summary>

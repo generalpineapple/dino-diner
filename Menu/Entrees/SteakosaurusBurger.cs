@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* SteakosaurusBurger.cs
+ * Author: Colden Miller
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu
 {

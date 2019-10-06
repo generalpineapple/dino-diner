@@ -1,11 +1,19 @@
-﻿using System;
+﻿/* Menu.cs
+ * Author: Colden Miller
+ */using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// A class containing all availiable menu items
+    /// </summary>
     public class Menu
     {
+        /// <summary>
+        /// A list of all the availiable menu items
+        /// </summary>
         List<object> AvailableMenuItems
         {
             get
@@ -32,7 +40,9 @@ namespace DinoDiner.Menu
             }
         }
 
-
+        /// <summary>
+        /// a list of all Entrees
+        /// </summary>
         List<Entree> AvailableEntrees
         {
             get
@@ -49,7 +59,9 @@ namespace DinoDiner.Menu
             }
         }
 
-
+        /// <summary>
+        /// A list of all Sides
+        /// </summary>
         List<Side> AvailableSides
         {
             get
@@ -63,7 +75,9 @@ namespace DinoDiner.Menu
             }
         }
 
-
+        /// <summary>
+        /// A list of all Drinks
+        /// </summary>
         List<Drink> AvailableDrinks
         {
             get
@@ -77,7 +91,10 @@ namespace DinoDiner.Menu
             }
         }
 
-        List<IMenuItem> AvailanleCombos
+        /// <summary>
+        /// A list of all Combos
+        /// </summary>
+        List<IMenuItem> AvailalbeCombos
         {
             get
             {
@@ -88,6 +105,10 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// overrides the ToString method
+        /// </summary>
+        /// <returns>Every item on the menu seperated by a newline</returns>
         public override string ToString()
         {
             string fullMenu = "";

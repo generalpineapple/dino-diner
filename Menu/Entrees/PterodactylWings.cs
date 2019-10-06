@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿/* PterodactylWings.cs
+ * Author: Colden Miller
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu
 {

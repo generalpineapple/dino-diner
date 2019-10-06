@@ -1,9 +1,15 @@
-﻿using System;
+﻿/* Triceritots.cs
+ * Author: Colden Miller
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// class for tator tots
+    /// </summary>
     public class Triceritots : Side
     {
         /// <summary>
