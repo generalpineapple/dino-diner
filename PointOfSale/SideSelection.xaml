@@ -19,22 +19,22 @@
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Fryceritops" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <Button MinHeight="100" MaxHeight="165">
-                    <Image Source="Pictures/DinoDiner-08.png"/>
+                    <Image Source="Assets/DinoDiner-08.png"/>
                 </Button>
                 <TextBlock Text="Triceritots" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <Button MinHeight="100" MaxHeight="165">
-                    <Image Source="Pictures/DinoDiner-11.png"/>
+                    <Image Source="Assets/DinoDiner-11.png"/>
                 </Button>
             </StackPanel>
-            <Image Source="Pictures/DinoDiner-Rawr.png" Width="50px" Margin="5px"/>
+            <Image Source="Assets/DinoDiner-Rawr.png" Width="50px" Margin="5px"/>
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Meteor Mac &amp; Cheese" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <Button MinHeight="100" MaxHeight="165">
-                    <Image Source="Pictures/DinoDiner-09.png"/>
+                    <Image Source="Assets/DinoDiner-09.png"/>
                 </Button>
                 <TextBlock Text="Mozzerella Sticks" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <Button MinHeight="100" MaxHeight="165">
-                    <Image Source="Pictures/DinoDiner-10.png"/>
+                    <Image Source="Assets/DinoDiner-10.png"/>
                 </Button>
             </StackPanel>
         </StackPanel>

@@ -41,32 +41,32 @@
 
         <TextBlock Text="Brontowurst" Grid.Column="0" Grid.Row="0"/>
         <Button Grid.Column="0" Grid.Row="1">
-            <Image Source="Pictures/DinoDiner-01.png"></Image>
+            <Image Source="Assets/DinoDiner-01.png"></Image>
         </Button>
         <TextBlock Text="Dino-Nuggets" Grid.Column="0" Grid.Row="2"/>
         <Button Grid.Column="0" Grid.Row="3">
-            <Image Source="Pictures/DinoDiner-02.png"></Image>
+            <Image Source="Assets/DinoDiner-02.png"></Image>
         </Button>
         <TextBlock Text="Steakosaurus" Grid.Column="0" Grid.Row="4"/>
         <Button Grid.Column="0" Grid.Row="5">
-            <Image Source="Pictures/DinoDiner-05.png"></Image>
+            <Image Source="Assets/DinoDiner-05.png"></Image>
         </Button>
         <TextBlock Text="T-Rex King Burger" Grid.Column="1" Grid.Row="4"/>
         <Button Grid.Column="1" Grid.Row="5">
-            <Image Source="Pictures/DinoDiner-06.png"></Image>
+            <Image Source="Assets/DinoDiner-06.png"></Image>
         </Button>
         <TextBlock Text="Pterodactyl Wings" Grid.Column="1" Grid.Row="2"/>
         <Button Grid.Column="1" Grid.Row="3">
-            <Image Source="Pictures/DinoDiner-04.png"></Image>
+            <Image Source="Assets/DinoDiner-04.png"></Image>
         </Button>
         <TextBlock Text="Prehistoric PB&amp;J" Grid.Column="2" Grid.Row="0"/>
         <Button Grid.Column="2" Grid.Row="1">
-            <Image Source="Pictures/DinoDiner-03.png"></Image>
+            <Image Source="Assets/DinoDiner-03.png"></Image>
         </Button>
         <TextBlock Text="Veloci-Wrap" Grid.Column="1" Grid.Row="0"/>
         <Button Grid.Column="1" Grid.Row="1">
-            <Image Source="Pictures/DinoDiner-07.png"></Image>
+            <Image Source="Assets/DinoDiner-07.png"></Image>
         </Button>
-        <Image Source="Pictures/DinoDiner-Rawr.png" Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"/>
+        <Image Source="Assets/DinoDiner-Rawr.png" Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"/>
     </Grid>
 </Page>
