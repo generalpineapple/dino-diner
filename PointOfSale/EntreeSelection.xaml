@@ -14,8 +14,9 @@
                 <Setter Property="MinWidth" Value="100"/>
                 <Setter Property="MinHeight" Value="100"/>
                 <Setter Property="MaxHeight" Value="160"/>
-                <Setter Property="MaxWidth" Value="160"/>
+                <Setter Property="MaxWidth" Value="130"/>
                 <Setter Property="Background" Value="MediumSeaGreen"/>
+                <Setter Property="Margin" Value="5px"/>
             </Style>
             <Style TargetType="TextBlock">
                 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -25,11 +26,9 @@
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="5px"/>
             <RowDefinition Height="4*"/>
-            <RowDefinition/>
             <RowDefinition Height="4*"/>
-            <RowDefinition/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="5px"/>
         </Grid.RowDefinitions>
@@ -37,36 +36,53 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Brontowurst" Grid.Column="0" Grid.Row="0"/>
+        
         <Button Grid.Column="0" Grid.Row="1">
-            <Image Source="Assets/DinoDiner-01.png"></Image>
+            <StackPanel>
+                <TextBlock Text="Brontowurst"/>
+                <TextBlock Text="Combo"/>
+                <Image Source="Assets/DinoDiner-01.png" MaxHeight="100"/>
+            </StackPanel>
         </Button>
-        <TextBlock Text="Dino-Nuggets" Grid.Column="0" Grid.Row="2"/>
+        <Button Grid.Column="0" Grid.Row="2">
+            <StackPanel>
+                <TextBlock Text="Dino-Nuggets"/>
+                <Image Source="Assets/DinoDiner-02.png" MaxHeight="100"/>
+            </StackPanel>
+        </Button>
         <Button Grid.Column="0" Grid.Row="3">
-            <Image Source="Assets/DinoDiner-02.png"></Image>
+            <StackPanel>
+                <TextBlock Text="Steakosarus Burger"/>
+                <Image Source="Assets/DinoDiner-05.png" MaxHeight="100"/>
+            </StackPanel>
         </Button>
-        <TextBlock Text="Steakosaurus" Grid.Column="0" Grid.Row="4"/>
-        <Button Grid.Column="0" Grid.Row="5">
-            <Image Source="Assets/DinoDiner-05.png"></Image>
-        </Button>
-        <TextBlock Text="T-Rex King Burger" Grid.Column="1" Grid.Row="4"/>
-        <Button Grid.Column="1" Grid.Row="5">
-            <Image Source="Assets/DinoDiner-06.png"></Image>
-        </Button>
-        <TextBlock Text="Pterodactyl Wings" Grid.Column="1" Grid.Row="2"/>
         <Button Grid.Column="1" Grid.Row="3">
-            <Image Source="Assets/DinoDiner-04.png"></Image>
+            <StackPanel>
+                <TextBlock Text="T-Rex King Burger"/>
+                <Image Source="Assets/DinoDiner-06.png" MaxHeight="100"/>
+            </StackPanel>
         </Button>
-        <TextBlock Text="Prehistoric PB&amp;J" Grid.Column="2" Grid.Row="0"/>
+        <Button Grid.Column="1" Grid.Row="2">
+            <StackPanel>
+                <TextBlock Text="Pterodactyl Wings"/>
+                <Image Source="Assets/DinoDiner-04.png" MaxHeight="100"/>
+            </StackPanel>
+        </Button>
         <Button Grid.Column="2" Grid.Row="1">
-            <Image Source="Assets/DinoDiner-03.png"></Image>
+            <StackPanel>
+                <TextBlock Text="Prehistoric PB&amp;J"/>
+                <Image Source="Assets/DinoDiner-03.png" MaxHeight="100"/>
+            </StackPanel>
         </Button>
-        <TextBlock Text="Veloci-Wrap" Grid.Column="1" Grid.Row="0"/>
         <Button Grid.Column="1" Grid.Row="1">
-            <Image Source="Assets/DinoDiner-07.png"></Image>
+            <StackPanel>
+                <TextBlock Text="Veloci-Wrap"/>
+                <Image Source="Assets/DinoDiner-07.png" MaxHeight="100"/>
+            </StackPanel>
         </Button>
-        <Image Source="Assets/DinoDiner-Rawr.png" Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"/>
+        <Image Source="Assets/DinoDiner-Rawr.png" Grid.Column="2" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>
