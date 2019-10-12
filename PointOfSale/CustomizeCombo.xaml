@@ -9,6 +9,59 @@
       Title="CustomizeCombo">
 
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="MinHeight" Value="100"/>
+                <Setter Property="MaxHeight" Value="200"/>
+                <Setter Property="MaxWidth" Value="200"/>
+                <Setter Property="Background" Value="MediumSeaGreen"/>
+                <Setter Property="Margin" Value="5px"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </Grid.Resources>
+        <StackPanel  Grid.Column="1">
+            <TextBlock Text="Current Side:"/>
+            <Button Click="ChangeSide">
+                <StackPanel>
+                    <TextBlock Text="Fryceritops" FontSize="14"/>
+                    <Image Source="Assets/DinoDiner-08.png"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel  Grid.Column="2">
+            <TextBlock Text="Current Drink:"/>
+            <Button Click="ChangeDrink">
+                <StackPanel>
+                    <TextBlock Text="Sodasaurus" FontSize="14"/>
+                    <Image Source="Assets/DinoDiner-14.png"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="20px" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Size:   " FontSize="20px" VerticalAlignment="Center"/>
+            <RadioButton Content="Small " Tag="Small" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center" IsChecked="True"/>
+            <RadioButton Content="Medium " Tag="Medium" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
+                <RadioButton Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <Image Source="Assets/DinoDiner-Rawr.png" Grid.Row="1"/>
+        <Button Grid.Column="3" Grid.Row="1" MaxWidth="160" MinWidth="140" MaxHeight="40" MinHeight="40" Margin="20" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBlock FontSize="20" Text="Add Order"/>
+        </Button>
     </Grid>
 </Page>
