@@ -69,15 +69,15 @@
             <RadioButton Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
         </StackPanel>
         <StackPanel  VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Grid.RowSpan="4">
-            <Button Name="But1" IsEnabled="True" Opacity="100" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+            <Button Name="But1" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
                 <TextBlock Name="TextBlock1" Text="Flavor" FontSize="20"/>
             </Button>
 
-            <Button Name="But2" IsEnabled="False" Opacity="100" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+            <Button Name="But2" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
                 <TextBlock Name="TextBlock2" Text="No Lemon" FontSize="20"/>
             </Button>
 
-            <Button Name="Flavor" IsEnabled="False" Opacity="100" Click="SelectFlavor" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+            <Button Name="Flavor" IsEnabled="False" Opacity="0" Click="SelectFlavor" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
                 <TextBlock Text="Choose Flavor" FontSize="20"/>
             </Button>
 

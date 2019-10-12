@@ -60,7 +60,7 @@
                 <RadioButton Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
         </StackPanel>
         <Image Source="Assets/DinoDiner-Rawr.png" Grid.Row="1"/>
-        <Button Grid.Column="3" Grid.Row="1" MaxWidth="160" MinWidth="140" MaxHeight="40" MinHeight="40" Margin="20" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+        <Button IsEnabled="False" Grid.Column="3" Grid.Row="1" MaxWidth="160" MinWidth="140" MaxHeight="40" MinHeight="40" Margin="20" VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <TextBlock FontSize="20" Text="Add Order"/>
         </Button>
     </Grid>
