@@ -8,7 +8,65 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FlavorSelection">
 
-    <Grid>
-        
-    </Grid>
+    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <WrapPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="MinWidth" Value="100"/>
+                <Setter Property="MinHeight" Value="100"/>
+                <Setter Property="MaxHeight" Value="169"/>
+                <Setter Property="MaxWidth" Value="130"/>
+                <Setter Property="Background" Value="MediumSeaGreen"/>
+                <Setter Property="Margin" Value="5px"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Bottom"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+        </WrapPanel.Resources>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Cherry"/>
+                <Image Source="Assets/DinoDiner-16.png" />
+             </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Chocolate"/>
+                <Image Source="Assets/DinoDiner-17.png" />
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Cola"/>
+                <Image Source="Assets/DinoDiner-18.png" />
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Lime"/>
+                <Image Source="Assets/DinoDiner-19.png" />
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Orange"/>
+                <Image Source="Assets/DinoDiner-20.png" />
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Root Beer"/>
+                <Image Source="Assets/DinoDiner-21.png" />
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <TextBlock Text="Vanilla"/>
+                <Image Source="Assets/DinoDiner-22.png" />
+            </StackPanel>
+        </Button>
+        <Image Source="Assets/DinoDiner-Rawr.png" MaxHeight="140"/>
+    </WrapPanel>
 </Page>
