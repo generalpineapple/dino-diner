@@ -17,9 +17,45 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Click="SelectCombo"  Grid.Row="0" Grid.Column="0">Combos</Button>
-        <Button Click="SelectEntree" Grid.Row="0" Grid.Column="1">Entrees</Button>
-        <Button Click="SelectSide" Grid.Row="1" Grid.Column="0">Sides</Button>
-        <Button Click="SelectDrink" Grid.Row="1" Grid.Column="1">Drinks</Button>
+        <Button Click="SelectCombo"  Grid.Row="0" Grid.Column="0" FontSize="25" FontWeight="ExtraBold" Content="Combos">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="MediumSeaGreen" Margin="50,15,50,15"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Click="SelectEntree" Grid.Row="0" Grid.Column="1" FontSize="25" FontWeight="ExtraBold" Content="Entrees">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="MediumSeaGreen" Margin="50,15,50,15"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Click="SelectSide" Grid.Row="1" Grid.Column="0" FontSize="25" FontWeight="ExtraBold" Content="Sides">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="MediumSeaGreen" Margin="50,15,50,15"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Click="SelectDrink" Grid.Row="1" Grid.Column="1" FontSize="25" FontWeight="ExtraBold" Content="Drinks">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="MediumSeaGreen" Margin="50,15,50,15"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
