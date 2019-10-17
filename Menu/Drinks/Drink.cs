@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// abstract class for drinks
     /// </summary>
-    public abstract class  Drink : IMenuItem
+    public abstract class  Drink : IMenuItem, IOrderItem
     {
         /// <summary>
         /// an abstract variable to set and get size of drink
@@ -36,6 +36,10 @@ namespace DinoDiner.Menu
         /// List of Ingredients
         /// </summary>
         public abstract List<string> Ingredients { get; }
+
+        public abstract string Description { get; }
+
+        public abstract string[] Special { get; }
 
         /// <summary>
         /// Allows users to Hold Ice 

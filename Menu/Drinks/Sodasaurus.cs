@@ -3,6 +3,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace DinoDiner.Menu
@@ -10,12 +11,25 @@ namespace DinoDiner.Menu
     /// <summary>
     /// class for soda
     /// </summary>
-    public class Sodasaurus : Drink
+    public class Sodasaurus : Drink, INotifyPropertyChanged
     {
         /// <summary>
         /// gets and sets Flavor
         /// </summary>
         public SodasaurusFlavor Flavor { get; set; }
+
+        /// <summary>
+        /// The PropertyChanged event handler; notifies
+        /// of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        //Helper function for notifying of property changes
+        private void NotifyOfPropertyChange(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         /// <summary>
         /// List of ingredients
@@ -28,12 +42,12 @@ namespace DinoDiner.Menu
             }
         }
 
-        public string Description
+        public override string Description
         {
             get { return this.ToString();  }
         }
 
-        public string[] Special
+        public override string[] Special
         {
             get
             {
@@ -43,10 +57,6 @@ namespace DinoDiner.Menu
             }
         }
 
-        /// <summary>
-        /// this declares the enum size
-        /// </summary>
-        private Size size;
         /// <summary>
         /// When changing the size, this method will 
         /// update the Price and Calories of the item
