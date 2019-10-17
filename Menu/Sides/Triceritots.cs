@@ -1,17 +1,51 @@
 ﻿/* Triceritots.cs
  * Author: Colden Miller
  */
-using System;
+using System.ComponentModel;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// class for tator tots
     /// </summary>
-    public class Triceritots : Side
+    public class Triceritots : Side, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The PropertyChanged event handler; notifies
+        /// of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        //Helper function for notifying of property changes
+        private void NotifyOfPropertyChange(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Gets and sets the description
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Gets any special preparation instructions
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                return null;
+            }
+        }
+
         /// <summary>
         /// List of ingredients on their selected Side
         /// </summary>
