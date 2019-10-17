@@ -47,6 +47,7 @@ namespace MenuTest.Entrees
             Assert.DoesNotContain<string>("Jelly", pbj.Ingredients);
         }
 
+        //INotify
         [Fact]
         public void HoldPeanutButterShouldNotifyOfSpecialPropertyChange()
         {
@@ -61,6 +62,7 @@ namespace MenuTest.Entrees
             Assert.PropertyChanged(pbj, "Special", () => pbj.HoldJelly());
         }
 
+        //Special
         [Fact]
         public void ShouldHaveEmptyScpecialListByDefault()
         {
@@ -111,6 +113,8 @@ namespace MenuTest.Entrees
                 }
             );
         }
+
+        //Description
 
     }
 

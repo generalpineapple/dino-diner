@@ -57,6 +57,8 @@ namespace DinoDiner.Menu
             }
         }
 
+        //Backing variable
+        private Size size;
         /// <summary>
         /// When changing the size, this method will 
         /// update the Price and Calories of the item
