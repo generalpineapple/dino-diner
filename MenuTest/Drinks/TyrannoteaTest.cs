@@ -236,7 +236,7 @@ namespace MenuTest.Drinks
             Assert.Collection<string>(tt.Special,
                 item =>
                 {
-                    Assert.Equal("Add Sugar", item);
+                    Assert.Equal("Add Cane Sugar", item);
                 }
             );
         }
@@ -255,7 +255,7 @@ namespace MenuTest.Drinks
         }
 
         [Fact]
-        public void SpecialShouldContainall()
+        public void SpecialShouldContainAll()
         {
             Tyrannotea tt = new Tyrannotea();
             tt.AddLemon();
@@ -264,11 +264,11 @@ namespace MenuTest.Drinks
             Assert.Collection<string>(tt.Special,
                 item =>
                 {
-                    Assert.Equal("Add Lemon", item);
+                    Assert.Equal("Add Cane Sugar", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Add Sugar", item);
+                    Assert.Equal("Add Lemon", item);
                 },
                 item =>
                 {

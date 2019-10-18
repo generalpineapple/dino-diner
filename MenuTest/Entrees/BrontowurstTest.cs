@@ -86,7 +86,7 @@ namespace MenuTest.Entrees
             Assert.Collection<string>(bw.Special,
                 item =>
                 {
-                    Assert.Equal("Hold Onion", item);
+                    Assert.Equal("Hold Onions", item);
                 }
             );
         }
@@ -118,11 +118,11 @@ namespace MenuTest.Entrees
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Onion", item);
+                    Assert.Equal("Hold Peppers", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Peppers", item);
+                    Assert.Equal("Hold Onions", item);
                 }
             );
         }

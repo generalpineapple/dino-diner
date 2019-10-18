@@ -16,6 +16,7 @@ namespace DinoDiner.Menu
         public bool RoomForCream = false;
         public bool Decaf = false;
 
+
         /// <summary>
         /// The PropertyChanged event handler; notifies
         /// of changes to the Price, Description, and
@@ -49,7 +50,7 @@ namespace DinoDiner.Menu
             {
                 List<string> special = new List<string>();
                 if (RoomForCream) special.Add("Leave Room for Cream");
-                if (!Ice) special.Add("Add Ice");
+                if (Ice) special.Add("Add Ice");
                 return special.ToArray();
             }
         }

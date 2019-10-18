@@ -178,11 +178,11 @@ namespace MenuTest.Drinks
             Assert.Collection<string>(wat.Special,
                 item =>
                 {
-                    Assert.Equal("Hold Ice", item);
+                    Assert.Equal("Add Lemon", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Add Lemon", item);
+                    Assert.Equal("Hold Ice", item);
                 }
             );
         }

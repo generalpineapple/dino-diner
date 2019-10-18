@@ -254,11 +254,11 @@ namespace MenuTest.Entrees
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Mayo", item);
+                    Assert.Equal("Hold Onion", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Onion", item);
+                    Assert.Equal("Hold Mayo", item);
                 },
                 item =>
                 {

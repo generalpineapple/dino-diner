@@ -37,10 +37,7 @@ namespace DinoDiner.Menu
         /// </summary>
         public override string[] Special
         {
-            get
-            {
-                return null;
-            }
+            get { return new string[0]; }
         }
         /// <summary>
         /// List of ingredients on their selected entree

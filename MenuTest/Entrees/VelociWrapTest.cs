@@ -73,7 +73,7 @@ namespace MenuTest.Entrees
             Assert.Collection<string>(bw.Special,
                 item =>
                 {
-                    Assert.Equal("Hold Romane Lettuce", item);
+                    Assert.Equal("Hold Romaine Lettuce", item);
                 }
             );
         }
@@ -86,7 +86,7 @@ namespace MenuTest.Entrees
             Assert.Collection<string>(bw.Special,
                 item =>
                 {
-                    Assert.Equal("Hold Ceaser Dressing", item);
+                    Assert.Equal("Hold Ceasar Dressing", item);
                 }
             );
         }
@@ -99,7 +99,7 @@ namespace MenuTest.Entrees
             Assert.Collection<string>(bw.Special,
                 item =>
                 {
-                    Assert.Equal("Hold Parmasan Cheese", item);
+                    Assert.Equal("Hold Parmesan Cheese", item);
                 }
             );
         }
@@ -114,15 +114,15 @@ namespace MenuTest.Entrees
             Assert.Collection<string>(bw.Special,
                 item =>
                 {
-                    Assert.Equal("Hold Parmasan Cheese", item);
+                    Assert.Equal("Hold Ceasar Dressing", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Ceaser Dressing", item);
+                    Assert.Equal("Hold Romaine Lettuce", item);
                 },
                 item =>
                 {
-                    Assert.Equal("Hold Parmasan Cheese", item);
+                    Assert.Equal("Hold Parmesan Cheese", item);
                 }
             );
         }
