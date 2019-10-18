@@ -90,6 +90,8 @@ namespace DinoDiner.Menu
         {
             set
             {
+                NotifyOfPropertyChange("Price");
+                NotifyOfPropertyChange("Description");
                 size = value;
                 switch (size)
                 {
@@ -125,6 +127,8 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
+            NotifyOfPropertyChange("Ingredients");
+            NotifyOfPropertyChange("Special");
         }
 
 
@@ -135,6 +139,8 @@ namespace DinoDiner.Menu
         {
             Sweet = true;
             Size = size;
+            NotifyOfPropertyChange("Ingredients");
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>

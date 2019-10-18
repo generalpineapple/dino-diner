@@ -66,6 +66,8 @@ namespace DinoDiner.Menu
         {
             set
             {
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Price");
                 size = value;
                 switch (size)
                 {

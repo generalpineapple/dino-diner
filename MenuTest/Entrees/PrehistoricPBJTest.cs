@@ -62,6 +62,8 @@ namespace MenuTest.Entrees
             Assert.PropertyChanged(pbj, "Special", () => pbj.HoldJelly());
         }
 
+
+
         //Special
         [Fact]
         public void ShouldHaveEmptyScpecialListByDefault()
@@ -113,9 +115,6 @@ namespace MenuTest.Entrees
                 }
             );
         }
-
-        //Description
-
     }
 
 }

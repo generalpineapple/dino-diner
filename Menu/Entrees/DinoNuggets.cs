@@ -78,6 +78,8 @@ namespace DinoDiner.Menu
             nuggets++;
             this.Price += .25;
             this.Calories += 59;
+            NotifyOfPropertyChange("Ingredients");
+            NotifyOfPropertyChange("Price");
         }
 
         /// <summary>

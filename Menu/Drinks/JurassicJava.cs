@@ -89,6 +89,8 @@ namespace DinoDiner.Menu
         {
             set
             {
+                NotifyOfPropertyChange("Description");
+                NotifyOfPropertyChange("Price");
                 size = value;
                 switch (size)
                 {
@@ -118,6 +120,7 @@ namespace DinoDiner.Menu
         public void MakeDecaf()
         {
             Decaf = true;
+            NotifyOfPropertyChange("Description");
         }
 
         /// <summary>
@@ -126,6 +129,7 @@ namespace DinoDiner.Menu
         public void LeaveRoomForCream()
         {
             RoomForCream = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>
@@ -134,6 +138,7 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             Ice = true;
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>

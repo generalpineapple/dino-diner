@@ -3,6 +3,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace DinoDiner.Menu
@@ -10,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// abstract class for drinks
     /// </summary>
-    public abstract class  Drink : IMenuItem, IOrderItem
+    public abstract class  Drink : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// an abstract variable to set and get size of drink
@@ -41,12 +42,20 @@ namespace DinoDiner.Menu
 
         public abstract string[] Special { get; }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyOfPropertyChange(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <summary>
         /// Allows users to Hold Ice 
         /// </summary>
         public void HoldIce()
         {
             Ice = false;
+            NotifyOfPropertyChange("Special");
         }
     }
 }

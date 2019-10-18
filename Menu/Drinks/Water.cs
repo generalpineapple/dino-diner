@@ -75,10 +75,17 @@ namespace DinoDiner.Menu
             }
         }
 
+        Size size;
         /// <summary>
         /// Allows to set and get Size
         /// </summary>
-        public override Size Size { get; set; }
+        public override Size Size {
+            get { return size; }
+            set {
+                size = value;
+                NotifyOfPropertyChange("Description");
+            }
+        }
 
         /// <summary>
         /// Adds Lemon to the water
@@ -86,6 +93,8 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
+            NotifyOfPropertyChange("Ingredients");
+            NotifyOfPropertyChange("Special");
         }
 
         /// <summary>
