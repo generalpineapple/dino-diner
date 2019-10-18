@@ -95,8 +95,31 @@ namespace MenuTest.Entrees
         public void SpecialShouldHoldCheese()
         {
             VelociWrap bw = new VelociWrap();
-            bw.HoldLettuce();
+            bw.HoldCheese();
             Assert.Collection<string>(bw.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Parmasan Cheese", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldHoldAll()
+        {
+            VelociWrap bw = new VelociWrap();
+            bw.HoldLettuce();
+            bw.HoldDressing();
+            bw.HoldCheese();
+            Assert.Collection<string>(bw.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Parmasan Cheese", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Hold Ceaser Dressing", item);
+                },
                 item =>
                 {
                     Assert.Equal("Hold Parmasan Cheese", item);

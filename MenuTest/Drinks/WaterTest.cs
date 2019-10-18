@@ -134,5 +134,57 @@ namespace MenuTest.Drinks
             Assert.Contains("Lemon", water.Ingredients);
             Assert.Equal(2, water.Ingredients.Count);
         }
+
+        //Special
+        [Fact]
+        public void ShouldHaveEmptyScpecialListByDefault()
+        {
+            Water pbj = new Water();
+            Assert.Empty(pbj.Special);
+        }
+
+        [Fact]
+        public void SpecialShouldHoldIce()
+        {
+            Water wat = new Water();
+            wat.HoldIce();
+            Assert.Collection<string>(wat.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Ice", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldAddLemon()
+        {
+            Water wat = new Water();
+            wat.AddLemon();
+            Assert.Collection<string>(wat.Special,
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldContainAll()
+        {
+            Water wat = new Water();
+            wat.HoldIce();
+            wat.AddLemon();
+            Assert.Collection<string>(wat.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Ice", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                }
+            );
+        }
     }
 }

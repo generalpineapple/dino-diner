@@ -49,7 +49,7 @@ namespace DinoDiner.Menu
             {
                 List<string> special = new List<string>();
                 if (RoomForCream) special.Add("Leave Room for Cream");
-                if (!Ice) special.Add("Hold Ice");
+                if (!Ice) special.Add("Add Ice");
                 return special.ToArray();
             }
         }

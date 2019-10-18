@@ -206,5 +206,75 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Cane Sugar", tea.Ingredients);
             Assert.Equal(4, tea.Ingredients.Count);
         }
+
+        //Special
+        [Fact]
+        public void ShouldHaveEmptyScpecialListByDefault()
+        {
+            Tyrannotea pbj = new Tyrannotea();
+            Assert.Empty(pbj.Special);
+        }
+
+        [Fact]
+        public void SpecialShouldHoldIce()
+        {
+            Tyrannotea bw = new Tyrannotea();
+            bw.HoldIce();
+            Assert.Collection<string>(bw.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Ice", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldAddSugar()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.AddSweet();
+            Assert.Collection<string>(tt.Special,
+                item =>
+                {
+                    Assert.Equal("Add Sugar", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldAddLemon()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.AddLemon();
+            Assert.Collection<string>(tt.Special,
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                }
+            );
+        }
+
+        [Fact]
+        public void SpecialShouldContainall()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.AddLemon();
+            tt.AddSweet();
+            tt.HoldIce();
+            Assert.Collection<string>(tt.Special,
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Add Sugar", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Hold Ice", item);
+                }
+            );
+        }
     }
 }
