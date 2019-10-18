@@ -83,5 +83,13 @@ namespace MenuTest.Sides
             ms.Size = Size.Large;
             Assert.Equal<Size>(Size.Large, ms.Size);
         }
+
+        //Special
+        [Fact]
+        public void ShouldHaveEmptyScpecialListByDefault()
+        {
+            MezzorellaSticks pbj = new MezzorellaSticks();
+            Assert.Empty(pbj.Special);
+        }
     }
 }
