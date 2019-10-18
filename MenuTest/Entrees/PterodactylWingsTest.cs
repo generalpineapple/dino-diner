@@ -30,5 +30,13 @@ namespace MenuTest.Entrees
             Assert.Equal<int>(2, ingredients.Count);
         }
 
+        //Special
+        [Fact]
+        public void ShouldHaveEmptyScpecialListByDefault()
+        {
+            PterodactylWings bw = new PterodactylWings();
+            Assert.Empty(bw.Special);
+        }
+
     }
 }

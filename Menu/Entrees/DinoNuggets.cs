@@ -44,9 +44,7 @@ namespace DinoDiner.Menu
         {
             get
             {
-                List<string> special = new List<string>();
-                special.Add($"{nuggets.ToString()} Nuggets");
-                return special.ToArray();
+                return null;
             }
         }
 
