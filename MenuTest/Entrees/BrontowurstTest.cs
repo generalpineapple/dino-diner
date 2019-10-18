@@ -126,6 +126,28 @@ namespace MenuTest.Entrees
                 }
             );
         }
+
+        //INotify
+        [Fact]
+        public void HoldBunShouldNotifyOfSpecialChange()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.PropertyChanged(bw, "Special", () => bw.HoldBun());
+        }
+
+        [Fact]
+        public void HoldOnionsShouldNotifyOfSpecialChange()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.PropertyChanged(bw, "Special", () => bw.HoldOnion());
+        }
+
+        [Fact]
+        public void HoldPeppersShouldNotifyOfSpecialChange()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.PropertyChanged(bw, "Special", () => bw.HoldPeppers());
+        }
     }
 
 }

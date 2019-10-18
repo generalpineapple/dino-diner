@@ -93,5 +93,13 @@ namespace MenuTest.Entrees
             DinoNuggets dn = new DinoNuggets();
             Assert.Empty(dn.Special);
         }
+
+        //INotify
+        [Fact]
+        public void ShouldNotifyPriceChangeWhenAddingNuggets()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.PropertyChanged(dn, "Price", () => dn.AddNugget());
+        }
     }
 }
