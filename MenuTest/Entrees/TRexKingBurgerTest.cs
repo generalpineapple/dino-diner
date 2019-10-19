@@ -267,6 +267,20 @@ namespace MenuTest.Entrees
             );
         }
 
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldBun());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldKetchup());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldMustard());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldPickle());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldLettuce());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldMayo());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldOnion());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldTomato());
+        }
+
     }
 
 }

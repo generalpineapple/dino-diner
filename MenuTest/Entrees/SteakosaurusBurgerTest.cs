@@ -151,6 +151,16 @@ namespace MenuTest.Entrees
                 }
             );
         }
+
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldBun());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldKetchup());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldMustard());
+            Assert.PropertyChanged(sb, "Special", () => sb.HoldPickle());
+        }
     }
 
 }

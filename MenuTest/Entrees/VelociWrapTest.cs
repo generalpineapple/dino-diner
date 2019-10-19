@@ -126,5 +126,14 @@ namespace MenuTest.Entrees
                 }
             );
         }
+
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            VelociWrap vw = new VelociWrap();
+            Assert.PropertyChanged(vw, "Special", () => vw.HoldCheese());
+            Assert.PropertyChanged(vw, "Special", () => vw.HoldDressing());
+            Assert.PropertyChanged(vw, "Special", () => vw.HoldLettuce());
+        }
     }
 }
