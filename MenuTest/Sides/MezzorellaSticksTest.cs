@@ -91,5 +91,32 @@ namespace MenuTest.Sides
             MezzorellaSticks pbj = new MezzorellaSticks();
             Assert.Empty(pbj.Special);
         }
+
+        //INotify
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeShouldNotifyOfDescriptionPropertyChange(Size size)
+        {
+            MezzorellaSticks ms = new MezzorellaSticks();
+            Assert.PropertyChanged(ms, "Description", () =>
+            {
+                ms.Size = size;
+            });
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeShouldNotifyOfPricePropertyChange(Size size)
+        {
+            MezzorellaSticks ms = new MezzorellaSticks();
+            Assert.PropertyChanged(ms, "Price", () =>
+            {
+                ms.Size = size;
+            });
+        }
     }
 }
