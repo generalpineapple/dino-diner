@@ -38,13 +38,25 @@ namespace DinoDiner.Menu
         /// </summary>
         public abstract List<string> Ingredients { get; }
 
+        /// <summary>
+        /// A Description of the item
+        /// </summary>
         public abstract string Description { get; }
-
+        
+        /// <summary>
+        /// Special instruction for preparing the item
+        /// </summary>
         public abstract string[] Special { get; }
 
+        /// <summary>
+        /// The PropertyChanged event handler; notifies
+        /// of changes to the Price, Description, and
+        /// Special properties
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-
-        private void NotifyOfPropertyChange(string propertyName)
+        
+        //Helper function for notifying of property changes
+        protected void NotifyOfPropertyChange(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

@@ -185,5 +185,47 @@ namespace MenuTest.Drinks
                 }
             );
         }
+
+        //INotify
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            Sodasaurus ss = new Sodasaurus();
+            Assert.PropertyChanged(ss, "Special", () => ss.HoldIce());
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ShouldNotifyOfPricePropertyChange(Size size)
+        {
+            Sodasaurus ss = new Sodasaurus();
+            Assert.PropertyChanged(ss, "Price", () => {
+                ss.Size = size;
+            });
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeShouldNotifyOfDescriptionPropertyChange(Size size)
+        {
+            Sodasaurus ss = new Sodasaurus();
+            Assert.PropertyChanged(ss, "Description", () => {
+                ss.Size = size;
+            });
+        }
+
+        [Fact]
+        public void ChangingFlavorShouldNotifyOfDescriptionProppertyChange()
+        {
+            Sodasaurus ss = new Sodasaurus();
+            Assert.PropertyChanged(ss, "Description", () =>
+            {
+                ss.Flavor = SodasaurusFlavor.Cherry;
+            });
+        }
     }
 }

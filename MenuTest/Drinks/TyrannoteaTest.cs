@@ -276,5 +276,46 @@ namespace MenuTest.Drinks
                 }
             );
         }
+
+        //INotify
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            Assert.PropertyChanged(tt, "Special", () => tt.AddLemon());
+            Assert.PropertyChanged(tt, "Special", () => tt.AddSweet());
+            Assert.PropertyChanged(tt, "Special", () => tt.HoldIce());
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ShouldNotifyOfPricePropertyChange(Size size)
+        {
+            Tyrannotea tt = new Tyrannotea();
+            Assert.PropertyChanged(tt, "Price", () => {
+                tt.Size = size;
+            });
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeShouldNotifyOfDescriptionPropertyChange(Size size)
+        {
+            Tyrannotea tt = new Tyrannotea();
+            Assert.PropertyChanged(tt, "Description", () => {
+                tt.Size = size;
+            });
+        }
+
+        [Fact]
+        public void AddSweetShouldNotifyOfDescriptionPropertyChange()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            Assert.PropertyChanged(tt, "Description", () => tt.AddSweet());
+        }
     }
 }

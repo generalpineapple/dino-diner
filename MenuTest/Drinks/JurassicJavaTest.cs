@@ -176,5 +176,51 @@ namespace MenuTest.Drinks
                 }
             );
         }
+
+        //INotify
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Special", () => jj.AddIce());
+            Assert.PropertyChanged(jj, "Special", () => jj.LeaveRoomForCream());
+        }
+
+        [Fact]
+        public void ShouldNotifyOfDescriptionPropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Description", () => jj.MakeDecaf());
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Small;
+            });
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Large;
+            });
+        }
+        [Fact]
+        public void ShouldNotifyOfPricePropertyChange()
+        {
+            JurassicJava jj = new JurassicJava();
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Small;
+            });
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Large;
+            });
+        }
+
     }
 }

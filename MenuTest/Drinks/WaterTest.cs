@@ -186,5 +186,26 @@ namespace MenuTest.Drinks
                 }
             );
         }
+
+        //INotify
+        [Fact]
+        public void ShouldNotifyOfSpecialPropertyChange()
+        {
+            Water wt = new Water();
+            Assert.PropertyChanged(wt, "Special", () => wt.AddLemon());
+            Assert.PropertyChanged(wt, "Special", () => wt.HoldIce());
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeShouldNotifyOfDescriptionPropertyChange(Size size)
+        {
+            Water wt = new Water();
+            Assert.PropertyChanged(wt, "Description", () => {
+                wt.Size = size;
+            });
+        }
     }
 }
