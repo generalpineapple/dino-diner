@@ -23,8 +23,6 @@ namespace DinoDiner.Menu
         {
             Items = new ObservableCollection<IOrderItem>();
             Items.CollectionChanged += OnCollectionChanged;
-            Items.Add(new Tyrannotea());
-            Items.Add(new Sodasaurus());
         }
 
         private void OnCollectionChanged(object sender, EventArgs args)

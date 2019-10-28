@@ -26,9 +26,7 @@ namespace PointOfSale
             InitializeComponent();
             OrderControl.NavigationService =  OrderUI.NavigationService;
             Order order = new Order();
-            DataContext = order;
-            order.Items.Add(new Tyrannotea());
-            order.Items.Add(new Sodasaurus());        
+            DataContext = order;     
         }
 
         private void BindDataContextToPage()

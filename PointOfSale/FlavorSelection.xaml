@@ -25,43 +25,43 @@
                 <Setter Property="FontSize" Value="14"/>
             </Style>
         </WrapPanel.Resources>
-        <Button>
+        <Button Click="OnCherry">
             <StackPanel>
                 <TextBlock Text="Cherry"/>
                 <Image Source="Assets/DinoDiner-16.png" />
              </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnChocolate">
             <StackPanel>
                 <TextBlock Text="Chocolate"/>
                 <Image Source="Assets/DinoDiner-17.png" />
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnCola">
             <StackPanel>
                 <TextBlock Text="Cola"/>
                 <Image Source="Assets/DinoDiner-18.png" />
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnLime">
             <StackPanel>
                 <TextBlock Text="Lime"/>
                 <Image Source="Assets/DinoDiner-19.png" />
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnOrange">
             <StackPanel>
                 <TextBlock Text="Orange"/>
                 <Image Source="Assets/DinoDiner-20.png" />
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnBeer">
             <StackPanel>
                 <TextBlock Text="Root Beer"/>
                 <Image Source="Assets/DinoDiner-21.png" />
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnVanilla">
             <StackPanel>
                 <TextBlock Text="Vanilla"/>
                 <Image Source="Assets/DinoDiner-22.png" />

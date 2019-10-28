@@ -14,7 +14,7 @@
             <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBox Text="Order" Grid.Row="0"></TextBox>
-        <ListBox Name="OrderItems" Grid.Row="1" ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="OnSelectionChanged" IsSynchronizedWithCurrentItem="True">
+        <ListBox Name="OrderItems" Grid.Row="1" ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="OnSelectionChanged" IsSynchronizedWithCurrentItem="True" DataContextChanged="OnDataContextChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel MinWidth="190" MinHeight="50">

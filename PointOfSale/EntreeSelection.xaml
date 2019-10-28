@@ -25,43 +25,43 @@
                 <Setter Property="FontSize" Value="14"/>
             </Style>
         </WrapPanel.Resources>
-        <Button>
+        <Button Click="OnSelectBrontowurst">
             <StackPanel>
                 <TextBlock Text="Brontowurst"/>
                 <Image Source="Assets/DinoDiner-01.png"/>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectDinoNuggets">
             <StackPanel>
                 <TextBlock Text="Dino-Nuggets"/>
                 <Image Source="Assets/DinoDiner-02.png"/>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectSteak">
             <StackPanel>
                 <TextBlock Text="Steakosaurus"/>
                 <Image Source="Assets/DinoDiner-05.png"/>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectTRex">
             <StackPanel>
                 <TextBlock Text="T-Rex King Burger"/>
                 <Image Source="Assets/DinoDiner-06.png"/>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectWings">
             <StackPanel>
                 <TextBlock Text="Pterodactyl Wings"/>
                 <Image Source="Assets/DinoDiner-04.png"/>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectPBJ">
             <StackPanel>
                 <TextBlock Text="Prehistoric PB&amp;J"/>
                 <Image Source="Assets/DinoDiner-03.png"/>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectWrap">
             <StackPanel>
                 <TextBlock Text="Veloci-Wrap"/>
                 <Image Source="Assets/DinoDiner-07.png"/>

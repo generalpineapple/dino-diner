@@ -29,9 +29,17 @@ namespace PointOfSale
 
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs args)
         {
-            if(OrderItems.SelectedItem is Side)
+            if(OrderItems.SelectedItem is Side side)
             {
-                NavigationService?.Navigate(new SideSelection());
+                NavigationService?.Navigate(new SideSelection(side));
+            }
+            if (OrderItems.SelectedItem is Drink drink)
+            {
+                NavigationService?.Navigate(new DrinkSelection(drink));
+            }
+            if (OrderItems.SelectedItem is Entree entree)
+            {
+                NavigationService?.Navigate(new EntreeSelection(entree));
             }
         }
 
@@ -50,7 +58,7 @@ namespace PointOfSale
 
         public void OnCollectionChanged(object sender, EventArgs args)
         {
-            //
+            CollectionViewSource.GetDefaultView(OrderItems.Items).MoveCurrentToLast();
         }
 
         private void OnRemovedItem(object sender, RoutedEventArgs args)

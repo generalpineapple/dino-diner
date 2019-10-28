@@ -64,26 +64,46 @@
         </Button>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Grid.Column="2" Grid.RowSpan="2">
             <TextBlock Text="Size:    " FontSize="20" FontWeight="Bold"/>
-            <RadioButton Content="Small " Tag="Small" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center" IsChecked="True"/>
-            <RadioButton Content="Medium " Tag="Medium" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
-            <RadioButton Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
+            <RadioButton Click="OnSelectSmall" Content="Small " Tag="Small" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center" IsChecked="True"/>
+            <RadioButton Click="OnSelectMedium" Content="Medium " Tag="Medium" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
+            <RadioButton Click="OnSelectLarge" Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
         </StackPanel>
-        <StackPanel  VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Grid.RowSpan="4">
-            <Button Name="But1" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
-                <TextBlock Name="TextBlock1" Text="Flavor" FontSize="20"/>
-            </Button>
+        <Grid VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+            <Button  Name="But1" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="TextBlock1" Text="Flavor" FontSize="13"/>
+                </Button>
 
-            <Button Name="But2" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
-                <TextBlock Name="TextBlock2" Text="No Lemon" FontSize="20"/>
-            </Button>
+                <Button Name="But2" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="TextBlock2" Text="No Lemon" FontSize="17"/>
+                </Button>                
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button  Name="IceButton" Click="OnIceClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="IceTextBlock" Text="Add Ice" FontSize="17"/>
+                </Button>
 
-            <Button Name="Flavor" IsEnabled="False" Opacity="0" Click="SelectFlavor" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
-                <TextBlock Text="Choose Flavor" FontSize="20"/>
-            </Button>
+                <Button Name="CreamButton" IsEnabled="False" Opacity="0" Click="OnCreamClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="cream" Text="No Cream" FontSize="17"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <Button Name="Flavor" IsEnabled="False" Opacity="0" Click="SelectFlavor" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+                    <TextBlock Text="Choose Flavor" FontSize="20"/>
+                </Button>
 
-            <Button IsEnabled="False" Opacity="100" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
-                <TextBlock Text="Add Order" FontSize="20"/>
-            </Button>
-        </StackPanel>
+                <Button x:Name="AddOrder" Click="OnAddOrder" IsEnabled="False" Opacity="100" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+                    <TextBlock Text="Add Order" FontSize="20"/>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

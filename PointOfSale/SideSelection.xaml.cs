@@ -23,6 +23,7 @@ namespace PointOfSale
     {
 
         public Side Side { get; set; }
+        private DinoDiner.Menu.Size Size { get; set; } = DinoDiner.Menu.Size.Small;
 
         public SideSelection()
         {
@@ -32,23 +33,35 @@ namespace PointOfSale
         public SideSelection(Side side)
         {
             InitializeComponent();
-            Side = side;
+            this.Side = side;
         }
 
         private void SelectSide(Side side)
         {
-
             if (DataContext is Order order)
             {
-                order.Items.Add(side);
                 this.Side = side;
-            }
+                side.Size = this.Size;
+                order.Items.Add(Side);                
+                NavigationService.Navigate(new MenuCatagorySelection());
+            }           
         }
 
         private void SelectSize(DinoDiner.Menu.Size size)
         {
-            if(Side != null)
-                this.Side.Size = size;
+            if(Side == null)
+                Size = size;
+            else
+            {
+                if (DataContext is Order order)
+                {
+                    order.Items.Remove(Side);
+                    Side.Size = size;
+                    this.Size = size;
+                    order.Items.Add(Side);
+                    NavigationService.Navigate(new MenuCatagorySelection());
+                }
+            }
         }
 
         protected void OnSelectFryceritops(object sender, RoutedEventArgs args)
