@@ -2,12 +2,16 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
+        xmlns:menu="clr-namespace:DinoDiner.Menu;assembly=Menu"
         xmlns:local="clr-namespace:PointOfSale"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+    Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>        
+        <menu:Order></menu:Order>
+    </Window.DataContext>
     <DockPanel>
-        <TextBlock DockPanel.Dock="Right" Width="200" TextAlignment="Center" Background="LightSteelBlue">// TODO: Order</TextBlock>
-        <Frame Source="MenuCatagorySelection.xaml" Background="Honeydew"></Frame>
+        <local:OrderControl x:Name="OrderList" DockPanel.Dock="Right" Width="200" Background="LightSteelBlue"/>
+        <Frame Name="OrderUI" LoadCompleted="OnLoadComplete" DataContextChanged="OnDataContextChanged" Source="MenuCatagorySelection.xaml" Background="Honeydew"></Frame>
     </DockPanel>
 </Window>

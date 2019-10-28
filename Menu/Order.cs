@@ -1,19 +1,37 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Collections.Generic;
-using System.Text;
+using System;
 
 namespace DinoDiner.Menu
 {
-    public class Order
+    public class Order  : INotifyPropertyChanged
     {
+        /// <summary>
+        /// An event handler for property chnages
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+
         /// <summary>
         /// Represents the items added to the order
         /// </summary>
-        public ObservableCollection<IOrderItem> Items { get; set; }
+        public ObservableCollection<IOrderItem> Items { get; protected set; }
 
         public Order()
         {
             Items = new ObservableCollection<IOrderItem>();
+            Items.CollectionChanged += OnCollectionChanged;
+            Items.Add(new Tyrannotea());
+            Items.Add(new Sodasaurus());
+        }
+
+        private void OnCollectionChanged(object sender, EventArgs args)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SubtotalCost"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxCost"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalCost"));
         }
 
         /// <summary>
@@ -32,10 +50,21 @@ namespace DinoDiner.Menu
             }
         }
 
+
+        double salesTaxRate = .1;        
         /// <summary>
         /// Gets the Sales rate tax and is able to be set
         /// </summary>
-        public double SalesTaxRate { get; protected set; } = .1;
+        public double SalesTaxRate {
+            get { return salesTaxRate; }
+            protected set {
+                if (value < 0) return;
+                salesTaxRate = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxRate"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxCost"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalCost"));
+            }
+        }
 
         /// <summary>
         /// This is the cost of the sales tax
