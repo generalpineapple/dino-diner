@@ -56,7 +56,7 @@ namespace PointOfSale
                         if (!ice) wat.HoldIce();
                         wat.Size = Size;
                         this.Drink = wat;
-                        order.Items.Add(wat);
+                        order.Add(wat);
                         NavigationService.Navigate(new MenuCatagorySelection());
                         break;
                     //Soda
@@ -65,7 +65,7 @@ namespace PointOfSale
                         {
                             if (!ice) soda.HoldIce();
                             soda.Size = Size;
-                            order.Items.Add(soda);
+                            order.Add(soda);
                             NavigationService.Navigate(new MenuCatagorySelection());
                         }                        
                         break;
@@ -77,7 +77,7 @@ namespace PointOfSale
                         if (!ice) tea.HoldIce();
                         tea.Size = Size;
                         this.Drink = tea;
-                        order.Items.Add(tea);
+                        order.Add(tea);
                         NavigationService.Navigate(new MenuCatagorySelection());
                         break;
                     //Java
@@ -88,7 +88,7 @@ namespace PointOfSale
                         if (ice) jav.AddIce();
                         jav.Size = Size;
                         this.Drink = jav;
-                        order.Items.Add(jav);
+                        order.Add(jav);
                         NavigationService.Navigate(new MenuCatagorySelection());
                         break;
 

@@ -52,7 +52,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Items.CollectionChanged += OnCollectionChanged;
+                //order.Items.PropertyChan += OnCollectionChanged;
             }
         }
 
@@ -67,7 +67,8 @@ namespace PointOfSale
             {
                 if (sender is FrameworkElement element)               
                     if (element.DataContext is IOrderItem item)
-                        order.Items.Remove(item);                
+                        order.Remove(item);
+                NavigationService.Navigate(new MenuCatagorySelection());
             }
         }
     }

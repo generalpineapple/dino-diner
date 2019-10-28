@@ -17,7 +17,7 @@
         <ListBox Name="OrderItems" Grid.Row="1" ItemsSource="{Binding Path=Items, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="OnSelectionChanged" IsSynchronizedWithCurrentItem="True" DataContextChanged="OnDataContextChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel MinWidth="190" MinHeight="50">
+                    <StackPanel MinWidth="180" MinHeight="50">
                         <TextBlock Text="{Binding Path=Description}" FontWeight="Bold" FontSize="13" HorizontalAlignment="Center"/>
                         <ListBox ItemsSource="{Binding Path=Special}" BorderBrush="White"/>
                         <Button Click="OnRemovedItem" Background="Red" Foreground="White" Grid.Column="1" Width="150" HorizontalAlignment="Center">X</Button>

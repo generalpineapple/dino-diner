@@ -46,5 +46,17 @@ namespace PointOfSale
         {
             BindDataContextToPage();
         }
+
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            if (OrderUI.NavigationService.CanGoBack)
+            {
+                OrderUI.NavigationService.GoBack();
+            }
+            else
+            {
+                OrderUI.NavigationService.Navigate(new MenuCatagorySelection());
+            }
+        }
     }
 }

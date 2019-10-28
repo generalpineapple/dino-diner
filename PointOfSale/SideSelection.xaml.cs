@@ -42,7 +42,7 @@ namespace PointOfSale
             {
                 this.Side = side;
                 side.Size = this.Size;
-                order.Items.Add(Side);                
+                order.Add(Side);                
                 NavigationService.Navigate(new MenuCatagorySelection());
             }           
         }
@@ -55,10 +55,10 @@ namespace PointOfSale
             {
                 if (DataContext is Order order)
                 {
-                    order.Items.Remove(Side);
+                    order.Remove(Side);
                     Side.Size = size;
                     this.Size = size;
-                    order.Items.Add(Side);
+                    order.Add(Side);
                     NavigationService.Navigate(new MenuCatagorySelection());
                 }
             }

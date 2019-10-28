@@ -39,10 +39,8 @@ namespace PointOfSale
 
             if (DataContext is Order order)
             {
-                order.Items.Add(entree);
+                order.Add(entree);
                 this.Entree = entree;
-                
-                NavigationService.Navigate(new MenuCatagorySelection());
             }
         }
 
@@ -73,7 +71,9 @@ namespace PointOfSale
 
         protected void OnSelectPBJ(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new PrehistoricPBJ());
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            SelectEntree(pbj);
+            NavigationService.Navigate(new CustomizePBJ(pbj));
         }
 
         protected void OnSelectWrap(object sender, RoutedEventArgs args)

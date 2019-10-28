@@ -12,9 +12,9 @@ namespace MenuTest
         public void ShouldHaveExpectedSubTotal()
         {
             Order order = new Order();
-            order.Items.Add(new Brontowurst());
-            order.Items.Add(new Fryceritops());
-            order.Items.Add(new Sodasaurus());
+            order.Add(new Brontowurst());
+            order.Add(new Fryceritops());
+            order.Add(new Sodasaurus());
             Assert.Equal(7.85, order.SubtotalCost, 2);
         }
 
@@ -22,9 +22,9 @@ namespace MenuTest
         public void ShouldHaveExpectedRateCost()
         {
             Order order = new Order();
-            order.Items.Add(new Brontowurst());
-            order.Items.Add(new Fryceritops());
-            order.Items.Add(new Sodasaurus());
+            order.Add(new Brontowurst());
+            order.Add(new Fryceritops());
+            order.Add(new Sodasaurus());
             Assert.Equal(.79, order.SalesTaxCost, 2);
         }
 
@@ -32,9 +32,9 @@ namespace MenuTest
         public void ShouldHaveExpectedTotalCost()
         {
             Order order = new Order();
-            order.Items.Add(new Brontowurst());
-            order.Items.Add(new Fryceritops());
-            order.Items.Add(new Sodasaurus());
+            order.Add(new Brontowurst());
+            order.Add(new Fryceritops());
+            order.Add(new Sodasaurus());
             Assert.Equal(8.64, order.TotalCost, 2);
         }
 

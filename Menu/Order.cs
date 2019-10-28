@@ -12,24 +12,54 @@ namespace DinoDiner.Menu
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-
+        List<IOrderItem> items = new List<IOrderItem>();
 
         /// <summary>
-        /// Represents the items added to the order
+        /// A collection of items in the order
         /// </summary>
-        public ObservableCollection<IOrderItem> Items { get; protected set; }
+        public IOrderItem[] Items
+        {
+            get
+            {
+                return items.ToArray();
+            }
+        }
+
 
         public Order()
         {
-            Items = new ObservableCollection<IOrderItem>();
-            Items.CollectionChanged += OnCollectionChanged;
+
         }
 
-        private void OnCollectionChanged(object sender, EventArgs args)
+        protected void NotifyAllPropertyChanged()
         {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SubtotalCost"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxCost"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalCost"));
+        }
+
+        public void Add(IOrderItem item)
+        {
+            items.Add(item);
+            item.PropertyChanged += OnCollectionChanged;
+            NotifyAllPropertyChanged();
+        }
+
+        public bool Remove(IOrderItem item)
+        {
+            bool removed = items.Remove(item);
+            if (removed)
+            {
+                NotifyAllPropertyChanged();
+            }
+            return removed;
+        }
+
+
+        private void OnCollectionChanged(object sender, EventArgs args)
+        {
+            NotifyAllPropertyChanged();
         }
 
         /// <summary>
@@ -39,7 +69,7 @@ namespace DinoDiner.Menu
             get
             {
                 double total = 0;
-                foreach(IOrderItem item in Items)
+                foreach(IOrderItem item in items)
                 {
                     total += item.Price;
                 }
