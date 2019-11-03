@@ -25,49 +25,49 @@
                 <Setter Property="FontSize" Value="14"/>
             </Style>
         </WrapPanel.Resources>
-        <Button Click="Customize">
+        <Button Click="OnBronto">
             <StackPanel>
                 <TextBlock Text="Brontowurst"/>
                 <TextBlock Text="Combo"/>
                 <Image Source="Assets/DinoDiner-01.png"/>
             </StackPanel>
         </Button>
-        <Button Click="Customize">
+        <Button Click="OnNuggets">
             <StackPanel>
                 <TextBlock Text="Dino-Nuggets"/>
                 <TextBlock Text="Combo"/>
                 <Image Source="Assets/DinoDiner-02.png"/>
             </StackPanel>
         </Button>
-        <Button Click="Customize">
+        <Button Click="OnSteak">
             <StackPanel>
                 <TextBlock Text="Steakosaurus"/>
                 <TextBlock Text="Combo"/>
                 <Image Source="Assets/DinoDiner-05.png"/>
             </StackPanel>
         </Button>
-        <Button Click="Customize">
+        <Button Click="OnTRex">
             <StackPanel>
                 <TextBlock Text="T-Rex King Burger"/>
                 <TextBlock Text="Combo"/>
                 <Image Source="Assets/DinoDiner-06.png"/>
             </StackPanel>
         </Button>
-        <Button Click="Customize">
+        <Button Click="OnWings">
             <StackPanel>
                 <TextBlock Text="Pterodactyl Wings"/>
                 <TextBlock Text="Combo"/>
                 <Image Source="Assets/DinoDiner-04.png"/>
             </StackPanel>
         </Button>
-        <Button Click="Customize">
+        <Button Click="OnPBJ">
             <StackPanel>
                 <TextBlock Text="Prehistoric PB&amp;J"/>
                 <TextBlock Text="Combo"/>
                 <Image Source="Assets/DinoDiner-03.png"/>
             </StackPanel>
         </Button>
-        <Button Click="Customize">
+        <Button Click="OnWings">
             <StackPanel>
                 <TextBlock Text="Veloci-Wrap"/>
                 <TextBlock Text="Combo"/>

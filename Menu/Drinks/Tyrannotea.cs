@@ -128,6 +128,7 @@ namespace DinoDiner.Menu
             Size = size;
             NotifyOfPropertyChange("Ingredients");
             NotifyOfPropertyChange("Special");
+            NotifyOfPropertyChange("Description");
         }
 
         /// <summary>

@@ -469,7 +469,7 @@ namespace MenuTest
             Tyrannotea tea = new Tyrannotea();
             Assert.PropertyChanged(tea, "Description", () =>
             {
-                tea.Sweet = true;
+                tea.AddSweet();
             });
         }
 
@@ -607,8 +607,7 @@ namespace MenuTest
         {
             Entree entree = (Entree)Activator.CreateInstance(type);
             CretaceousCombo combo = new CretaceousCombo(entree);
-            Assert.PropertyChanged(combo, propertyName, () =>
-            {
+            Assert.PropertyChanged(combo, propertyName, () => {
                 combo.Size = size;
             });
         }
