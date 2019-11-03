@@ -42,7 +42,15 @@ namespace DinoDiner.Menu
         /// </summary>
         public override string[] Special
         {
-            get { return new string[0]; }
+            get
+            {
+                List<string> special = new List<string>();
+                for (int i = 6; i < nuggets; i++)
+                {
+                    special.Add("Add Nuggets");
+                }
+                return special.ToArray();
+            }
         }
 
         /// <summary>

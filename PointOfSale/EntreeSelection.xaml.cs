@@ -46,22 +46,30 @@ namespace PointOfSale
 
         protected void OnSelectBrontowurst(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new Brontowurst());
+            Brontowurst bron = new Brontowurst();
+            SelectEntree(bron);
+            NavigationService.Navigate(new CustomizeBrontowurst(bron));
         }
 
         protected void OnSelectDinoNuggets(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new DinoNuggets());
+            DinoNuggets nugs = new DinoNuggets();
+            SelectEntree(nugs);
+            NavigationService.Navigate(new CustomizeNuggets(nugs));
         }
 
         protected void OnSelectSteak(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new SteakosaurusBurger());
+            SteakosaurusBurger bur = new SteakosaurusBurger();
+            SelectEntree(bur);
+            NavigationService.Navigate(new CustomizeSteakosaurusBurger(bur));
         }
 
         protected void OnSelectTRex(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new TRexKingBurger());
+            TRexKingBurger bur = new TRexKingBurger();
+            SelectEntree(bur);
+            NavigationService.Navigate(new CustomizeTRex(bur));
         }
 
         protected void OnSelectWings(object sender, RoutedEventArgs args)
@@ -78,7 +86,9 @@ namespace PointOfSale
 
         protected void OnSelectWrap(object sender, RoutedEventArgs args)
         {
-            SelectEntree(new VelociWrap());
+            VelociWrap wrap = new VelociWrap();
+            SelectEntree(wrap);
+            NavigationService.Navigate(new CustomizeWrap(wrap));
         }
     }
 }
