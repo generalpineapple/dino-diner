@@ -67,7 +67,7 @@
                 <Image Source="Assets/DinoDiner-03.png"/>
             </StackPanel>
         </Button>
-        <Button Click="OnWings">
+        <Button Click="OnWrap">
             <StackPanel>
                 <TextBlock Text="Veloci-Wrap"/>
                 <TextBlock Text="Combo"/>

@@ -22,15 +22,21 @@ namespace PointOfSale
     public partial class CustomizeCombo : Page
     {
         private CretaceousCombo combo;
+        private Entree Entree;
 
         public CustomizeCombo(CretaceousCombo combo)
         {
             InitializeComponent();
             this.combo = combo;
+            /*
             if (combo.Entree is Brontowurst)
                 NavigationService.Navigate(new CustomizeBrontowurst(combo.Entree as Brontowurst));
             else if (combo.Entree is DinoNuggets)
-                NavigationService.Navigate(new CustomizeNuggets(combo.Entree as DinoNuggets));
+            {
+                DinoNuggets entree = new DinoNuggets();
+                NavigationService.Navigate(new CustomizeNuggets(entree));
+                combo.Entree = entree;
+            }                
             else if (combo.Entree is PrehistoricPBJ)
                 NavigationService.Navigate(new CustomizePBJ(combo.Entree as PrehistoricPBJ));
             else if (combo.Entree is SteakosaurusBurger)
@@ -39,6 +45,7 @@ namespace PointOfSale
                 NavigationService.Navigate(new CustomizeTRex(combo.Entree as TRexKingBurger));
             else if (combo.Entree is VelociWrap)
                 NavigationService.Navigate(new CustomizeWrap(combo.Entree as VelociWrap));
+                */
         }
         private void ChangeSide(object obj, RoutedEventArgs args)
         {

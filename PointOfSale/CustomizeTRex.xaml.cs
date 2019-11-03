@@ -22,6 +22,7 @@ namespace PointOfSale
     public partial class CustomizeTRex : Page
     {
         private TRexKingBurger bur;
+        private CretaceousCombo combo;
 
         public CustomizeTRex(TRexKingBurger bur)
         {
@@ -29,44 +30,83 @@ namespace PointOfSale
             this.bur = bur;
         }
 
+        public CustomizeTRex(CretaceousCombo bur)
+        {
+            InitializeComponent();
+            this.bur = bur.Entree as TRexKingBurger;
+            combo = bur;
+        }
+
         private void OnHoldBun(object sender, RoutedEventArgs args)
         {
             bur.HoldBun();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnHoldPickle(object sender, RoutedEventArgs args)
         {
             bur.HoldPickle();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnHoldMustard(object sender, RoutedEventArgs args)
         {
             bur.HoldMustard();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnHoldKetchup(object sender, RoutedEventArgs args)
         {
             bur.HoldKetchup();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnHoldLettuce(object sender, RoutedEventArgs args)
         {
             bur.HoldLettuce();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnHoldOnions(object sender, RoutedEventArgs args)
         {
             bur.HoldMayo();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnHoldTomato(object sender, RoutedEventArgs args)
         {
             bur.HoldTomato();
+            if (combo != null)
+            {
+                combo.Entree = bur;
+            }
         }
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else if (NavigationService.CanGoBack)
             {
                 NavigationService.GoBack();
             }

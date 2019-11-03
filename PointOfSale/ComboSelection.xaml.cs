@@ -45,25 +45,25 @@ namespace PointOfSale
         private void OnBronto(object sender, RoutedEventArgs args)
         {
             SelectCombo(new CretaceousCombo(new Brontowurst()));
-            Customize(combo);
+            NavigationService.Navigate(new CustomizeBrontowurst(combo));
         }
 
         private void OnNuggets(object sender, RoutedEventArgs args)
         {
             SelectCombo(new CretaceousCombo(new DinoNuggets()));
-            Customize(combo);
+            NavigationService.Navigate(new CustomizeNuggets(combo));
         }
 
         private void OnSteak(object sender, RoutedEventArgs args)
         {
             SelectCombo(new CretaceousCombo(new SteakosaurusBurger()));
-            Customize(combo);
+            NavigationService.Navigate(new CustomizeSteakosaurusBurger(combo));
         }
 
         private void OnTRex(object sender, RoutedEventArgs args)
         {
             SelectCombo(new CretaceousCombo(new TRexKingBurger()));
-            Customize(combo);
+            NavigationService.Navigate(new CustomizeTRex(combo));
         }
 
         private void OnWings(object sender, RoutedEventArgs args)
@@ -75,13 +75,13 @@ namespace PointOfSale
         private void OnPBJ(object sender, RoutedEventArgs args)
         {
             SelectCombo(new CretaceousCombo(new PrehistoricPBJ()));
-            Customize(combo);
+            NavigationService.Navigate(new CustomizePBJ(combo));
         }
 
         private void OnWrap(object sender, RoutedEventArgs args)
         {
-            combo = new CretaceousCombo(new VelociWrap());
-            Customize(combo);
+            SelectCombo(new CretaceousCombo(new VelociWrap()));
+            NavigationService.Navigate(new CustomizeWrap(combo));
         }
     }
 }

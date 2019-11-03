@@ -22,6 +22,7 @@ namespace PointOfSale
     public partial class CustomizeBrontowurst : Page
     {
         private Brontowurst bron;
+        private CretaceousCombo combo;
 
         public CustomizeBrontowurst(Brontowurst bron)
         {
@@ -29,24 +30,47 @@ namespace PointOfSale
             this.bron = bron;
         }
 
+        public CustomizeBrontowurst(CretaceousCombo bron)
+        {
+            InitializeComponent();
+            this.combo = bron;
+            this.bron = bron.Entree as Brontowurst;
+        }
+
         private void OnHoldOnions(object sender, RoutedEventArgs args)
         {
             bron.HoldOnion();
+            if(combo != null)
+            {
+                combo.Entree = bron;
+            }
         }
 
         private void OnHoldBun(object sender, RoutedEventArgs args)
         {
             bron.HoldBun();
+            if (combo != null)
+            {
+                combo.Entree = bron;
+            }
         }
 
         private void OnHoldPeppers(object sender, RoutedEventArgs args)
         {
             bron.HoldPeppers();
+            if (combo != null)
+            {
+                combo.Entree = bron;
+            }
         }
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            if (NavigationService.CanGoBack)
+            if (combo != null)
+                {
+                    NavigationService.Navigate(new CustomizeCombo(combo));
+                }
+            else if (NavigationService.CanGoBack)
             {
                 NavigationService.GoBack();
             }
