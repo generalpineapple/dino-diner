@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu;
+using Size = DinoDiner.Menu.Size;
 
 namespace PointOfSale
 {
@@ -22,39 +23,35 @@ namespace PointOfSale
     public partial class CustomizeCombo : Page
     {
         private CretaceousCombo combo;
-        private Entree Entree;
 
         public CustomizeCombo(CretaceousCombo combo)
         {
             InitializeComponent();
             this.combo = combo;
-            /*
-            if (combo.Entree is Brontowurst)
-                NavigationService.Navigate(new CustomizeBrontowurst(combo.Entree as Brontowurst));
-            else if (combo.Entree is DinoNuggets)
-            {
-                DinoNuggets entree = new DinoNuggets();
-                NavigationService.Navigate(new CustomizeNuggets(entree));
-                combo.Entree = entree;
-            }                
-            else if (combo.Entree is PrehistoricPBJ)
-                NavigationService.Navigate(new CustomizePBJ(combo.Entree as PrehistoricPBJ));
-            else if (combo.Entree is SteakosaurusBurger)
-                NavigationService.Navigate(new CustomizeSteakosaurusBurger(combo.Entree as SteakosaurusBurger));
-            else if (combo.Entree is TRexKingBurger)
-                NavigationService.Navigate(new CustomizeTRex(combo.Entree as TRexKingBurger));
-            else if (combo.Entree is VelociWrap)
-                NavigationService.Navigate(new CustomizeWrap(combo.Entree as VelociWrap));
-                */
         }
         private void ChangeSide(object obj, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new SideSelection(combo));
         }
 
         private void ChangeDrink(object obj, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new DrinkSelection(combo));
+        }
+
+        protected void OnSelectLarge(object sender, RoutedEventArgs args)
+        {
+            combo.Size = DinoDiner.Menu.Size.Large;
+        }
+
+        protected void OnSelectMedium(object sender, RoutedEventArgs args)
+        {
+            combo.Size = DinoDiner.Menu.Size.Medium;
+        }
+
+        protected void OnSelectSmall(object sender, RoutedEventArgs args)
+        {
+            combo.Size = DinoDiner.Menu.Size.Small;
         }
     }
 

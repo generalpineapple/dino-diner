@@ -23,6 +23,7 @@ namespace PointOfSale
     {
 
         public Side Side { get; set; }
+        private CretaceousCombo combo;
         private DinoDiner.Menu.Size Size { get; set; } = DinoDiner.Menu.Size.Small;
 
         public SideSelection()
@@ -34,32 +35,66 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.Side = side;
+            this.Size = side.Size;
+        }
+
+        public SideSelection(CretaceousCombo side)
+        {
+            InitializeComponent();
+            this.Side = side.Side;
+            combo = side;
         }
 
         private void SelectSide(Side side)
         {
-            if (DataContext is Order order)
+            if (combo == null)
             {
-                this.Side = side;
-                side.Size = this.Size;
-                order.Add(Side);                
-                NavigationService.Navigate(new MenuCatagorySelection());
-            }           
+                if (Side == null)
+                {
+                    if (DataContext is Order order)
+                    {
+                        this.Side = side;
+                        side.Size = this.Size;
+                        order.Add(Side);
+                    }
+                }
+                else
+                {
+                    if (DataContext is Order order)
+                    {
+                        order.Remove(Side);
+                        this.Side = side;
+                        side.Size = this.Size;
+                        order.Add(Side);
+                        NavigationService.GoBack();
+                    }
+                }
+            }
+            else
+            {
+                Size = combo.Size;
+                combo.Side = side;
+                combo.Size = Size;
+                NavigationService.GoBack();
+            }
         }
 
         private void SelectSize(DinoDiner.Menu.Size size)
         {
-            if(Side == null)
-                Size = size;
-            else
+            if (combo == null)
             {
-                if (DataContext is Order order)
+                if (Side == null)
+                    Size = size;
+                else
                 {
-                    order.Remove(Side);
-                    Side.Size = size;
-                    this.Size = size;
-                    order.Add(Side);
-                    NavigationService.Navigate(new MenuCatagorySelection());
+                    if (DataContext is Order order)
+                    {
+                        order.Remove(Side);
+                        Side.Size = size;
+                        this.Size = size;
+                        order.Add(Side);
+                        NavigationService.GoBack();
+                    }
                 }
             }
         }

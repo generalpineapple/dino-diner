@@ -78,30 +78,30 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <StackPanel>
-            <Button  Name="But1" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
-                    <TextBlock Name="TextBlock1" Text="Flavor" FontSize="13"/>
+            <Button Click="OnAddSweet" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="TextBlock1" Text="Add Sugar" FontSize="17"/>
                 </Button>
 
-                <Button Name="But2" IsEnabled="False" Opacity="0" Click="buttonClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
-                    <TextBlock Name="TextBlock2" Text="No Lemon" FontSize="17"/>
+                <Button Click="OnAddLemon" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="TextBlock2" Text="Add Lemon" FontSize="17"/>
                 </Button>                
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <Button  Name="IceButton" Click="OnIceClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
-                    <TextBlock Name="IceTextBlock" Text="Add Ice" FontSize="17"/>
+                <Button  Click="OnIceClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                    <TextBlock Name="IceTextBlock" Text="Hold Ice" FontSize="17"/>
                 </Button>
 
-                <Button Name="CreamButton" IsEnabled="False" Opacity="0" Click="OnCreamClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
+                <Button Click="OnCreamClick" MinHeight="50" MaxHeight="50" MinWidth="70" MaxWidth="100" HorizontalAlignment="Left">
                     <TextBlock Name="cream" Text="No Cream" FontSize="17"/>
                 </Button>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
-                <Button Name="Flavor" IsEnabled="False" Opacity="0" Click="SelectFlavor" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+                <Button Click="SelectFlavor" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
                     <TextBlock Text="Choose Flavor" FontSize="20"/>
                 </Button>
 
-                <Button x:Name="AddOrder" Click="OnAddOrder" IsEnabled="False" Opacity="100" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
-                    <TextBlock Text="Add Order" FontSize="20"/>
+                <Button Click="OnDecaf" MinHeight="50" MaxHeight="50" MinWidth="150" MaxWidth="120" HorizontalAlignment="Left">
+                    <TextBlock Text="Make Decaf" FontSize="17"/>
                 </Button>
             </StackPanel>
         </Grid>

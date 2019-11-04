@@ -36,7 +36,7 @@
             </Style>
         </Grid.Resources>
         <StackPanel  Grid.Column="1">
-            <TextBlock Text="Current Side:"/>
+            <TextBlock Text="Choose Side:"/>
             <Button Click="ChangeSide">
                 <StackPanel>
                     <TextBlock Text="Fryceritops" FontSize="14"/>
@@ -45,7 +45,7 @@
             </Button>
         </StackPanel>
         <StackPanel  Grid.Column="2">
-            <TextBlock Text="Current Drink:"/>
+            <TextBlock Text="Choose Drink:"/>
             <Button Click="ChangeDrink">
                 <StackPanel>
                     <TextBlock Text="Sodasaurus" FontSize="14"/>
@@ -55,13 +55,10 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Margin="20px" HorizontalAlignment="Center" VerticalAlignment="Top">
             <TextBlock Text="Size:   " FontSize="20px" VerticalAlignment="Center"/>
-            <RadioButton Content="Small " Tag="Small" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center" IsChecked="True"/>
-            <RadioButton Content="Medium " Tag="Medium" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
-                <RadioButton Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
+            <RadioButton Click="OnSelectSmall" Content="Small " Tag="Small" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center" IsChecked="True"/>
+            <RadioButton Click="OnSelectMedium" Content="Medium " Tag="Medium" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
+                <RadioButton Click="OnSelectLarge" Content="Large " Tag="Large" FontSize="20" FontWeight="Bold" Margin="5px" VerticalContentAlignment="Center"/>
         </StackPanel>
         <Image Source="Assets/DinoDiner-Rawr.png" Grid.Row="1"/>
-        <Button IsEnabled="False" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" MaxWidth="160" MinWidth="140" MaxHeight="40" MinHeight="40" Margin="20" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-            <TextBlock FontSize="20" Text="Add Order"/>
-        </Button>
     </Grid>
 </Page>

@@ -22,6 +22,8 @@ namespace PointOfSale
     public partial class FlavorSelection : Page
     {
         Sodasaurus Soda;
+        private bool isCombo = false;
+        protected CretaceousCombo Combo;
 
         public FlavorSelection()
         {
@@ -35,45 +37,67 @@ namespace PointOfSale
                 Soda = soda;
         }
 
+        public FlavorSelection(CretaceousCombo drink)
+        {
+            InitializeComponent();
+            if (drink.Drink is Sodasaurus soda)
+                Soda = soda;
+            isCombo = true;
+            Combo = drink;
+        }
+
+        protected void updateCombo()
+        {
+            if(isCombo)
+                Combo.Drink = Soda;
+        }
+
         protected void OnCherry(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.Cherry;
+            updateCombo();
             NavigationService.GoBack();
         }
 
         protected void OnChocolate(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.Chocolate;
+            updateCombo();
             NavigationService.GoBack();
         }
 
         protected void OnCola(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.Cola;
+            updateCombo();
             NavigationService.GoBack();
         }
 
         protected void OnLime(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.Lime;
+            updateCombo();
             NavigationService.GoBack();
         }
 
         protected void OnOrange(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.Orange;
+            updateCombo();
             NavigationService.GoBack();
         }
 
         protected void OnBeer(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.RootBeer;
+            updateCombo();
             NavigationService.GoBack();
         }
 
         protected void OnVanilla(object sender, RoutedEventArgs args)
         {
             Soda.Flavor = SodasaurusFlavor.Vanilla;
+            updateCombo();
             NavigationService.GoBack();
         }
 
