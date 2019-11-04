@@ -41,6 +41,10 @@ namespace PointOfSale
             {
                 NavigationService?.Navigate(new EntreeSelection(entree));
             }
+            if (OrderItems.SelectedItem is CretaceousCombo combo)
+            {
+                NavigationService?.Navigate(new CustomizeCombo(combo));
+            }
         }
 
         private void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs args)
@@ -70,6 +74,16 @@ namespace PointOfSale
                         order.Remove(item);
                 NavigationService.Navigate(new MenuCatagorySelection());
             }
+        }
+
+        private void OnCancel(object sender, RoutedEventArgs args)
+        {
+            //ToDo
+        }
+
+        private void OnPay(object sender, RoutedEventArgs args)
+        {
+            //ToDo
         }
     }
 }
