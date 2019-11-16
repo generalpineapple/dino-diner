@@ -12,3 +12,10 @@ body {
     padding-right: 15px;
 }
 
+#banner{
+    height: 100px;
+}
+
+#banner-position{
+    grid-template-columns: 100px, 200px;
+}
