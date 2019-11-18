@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Menu\Menu.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="wwwroot\images\DinoDiner-Rawr.png" />
   </ItemGroup>
 

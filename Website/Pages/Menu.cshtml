@@ -4,5 +4,96 @@
     ViewData["Title"] = "Menu";
 }
 
-<h2>Menu</h2>
+<h1>Menu</h1>
 
+<h2>Combos</h2>
+<div class="menu-item">
+    <table>
+        <tr>
+            <th>Combos</th>
+            <th>Price</th>
+            <th>Calories</th>
+            <th>Ingredients</th>
+        </tr>
+        @foreach (DinoDiner.Menu.CretaceousCombo item in Model.Menu.AvailalbeCombos)
+        {
+            <tr>
+                <th>@item.ToString()</th>
+                <th>@String.Format("{0:0.00}", item.Price)</th>
+                <th>@item.Calories</th>
+                <th>@foreach (string ing in item.Ingredients)
+                {<p>@ing  </p>} </th>
+            </tr>
+        }
+    </table>
+</div>
+
+<h2>Entrees</h2>
+<div class="menu-item">
+    <table>
+        <tr>
+            <th>Entree</th>
+            <th>Price</th>
+            <th>Calories</th>
+            <th>Ingredients</th>
+        </tr>
+        @foreach (DinoDiner.Menu.Entree item in Model.Menu.AvailableEntrees)
+        {
+    <tr>
+        <th>@item.ToString()</th>
+        <th>@String.Format("{0:0.00}", item.Price)</th>
+        <th>@item.Calories</th>
+        <th>@foreach (string ing in item.Ingredients)
+        {<p>@ing  </p>} </th>
+    </tr>
+        }
+    </table>
+</div>
+
+<h2>Sides</h2>
+<div class="menu-item">
+    <table>
+        <tr>
+            <th>Sides</th>
+            <th>Price</th>
+            <th>Calories</th>
+            <th>Ingredients</th>
+        </tr>
+        @foreach (DinoDiner.Menu.Side item in Model.Menu.AvailableSides)
+        {
+    <tr>
+        <th>@item.ToString()</th>
+        <th>@String.Format("{0:0.00}", item.Price)</th>
+        <th>@item.Calories</th>
+        <th>
+            @foreach (string ing in item.Ingredients)
+            {<p>@ing  </p>}
+        </th>
+    </tr>
+    }
+    </table>
+</div>
+
+<h2>Drinks</h2>
+<div class="menu-item">
+    <table>
+        <tr>
+            <th>Drinks</th>
+            <th>Price</th>
+            <th>Calories</th>
+            <th>Ingredients</th>
+        </tr>
+        @foreach (DinoDiner.Menu.Drink item in Model.Menu.AvailableDrinks)
+        {
+    <tr>
+        <th>@item.ToString()</th>
+        <th>@String.Format("{0:0.00}", item.Price)</th>
+        <th>@item.Calories</th>
+        <th>
+            @foreach (string ing in item.Ingredients)
+            {<p>@ing  </p>}
+        </th>
+    </tr>
+    }
+    </table>
+</div>

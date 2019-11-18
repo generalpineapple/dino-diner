@@ -14,7 +14,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all the availiable menu items
         /// </summary>
-        List<object> AvailableMenuItems
+        public List<object> AvailableMenuItems
         {
             get
             {
@@ -43,7 +43,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// a list of all Entrees
         /// </summary>
-        List<Entree> AvailableEntrees
+        public List<Entree> AvailableEntrees
         {
             get
             {
@@ -62,7 +62,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all Sides
         /// </summary>
-        List<Side> AvailableSides
+        public List<Side> AvailableSides
         {
             get
             {
@@ -78,7 +78,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all Drinks
         /// </summary>
-        List<Drink> AvailableDrinks
+        public List<Drink> AvailableDrinks
         {
             get
             {
@@ -94,7 +94,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all Combos
         /// </summary>
-        List<IMenuItem> AvailalbeCombos
+        public List<IMenuItem> AvailalbeCombos
         {
             get
             {
