@@ -5,8 +5,15 @@ body {
     padding-bottom: 20px;
 }
 
+form {
+    background-color: lightgray;
+    padding: 20px;
+    width: 400px;
+}
+
 table {
     border: solid gray 2px;
+    display: flex;
 }
 
 th {    
@@ -19,6 +26,17 @@ th {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: row;    
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
 }
 
 #dino-img {

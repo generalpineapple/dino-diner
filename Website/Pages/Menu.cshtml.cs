@@ -10,11 +10,34 @@ namespace Website.Pages
 {
     public class MenuModel : PageModel
     {
-        public Menu Menu { get; private set; }
-        public string list { get; set; }
+        public Menu menu; 
+
+        public List<object> Menu { get; private set; }
+
+        [BindProperty]
+        public string search { get; set; }
+
+        [BindProperty]
+        public List<string> menuCategory { get; set; } = new List<string>();
+
+        [BindProperty]
+        public string price { get; set; }
+
+        [BindProperty]
+        public List<string> exIngredients { get; set; } = new List<string>();
+
+
+
+        //public string list { get; set; }
         public void OnGet()
         {
-            Menu = new Menu();
+            Menu = menu.AvailableMenuItems;
+            Menu.AddRange(menu.AvailalbeCombos);
+        }
+
+        public void OnPost()
+        {
+
         }
     }
 }
