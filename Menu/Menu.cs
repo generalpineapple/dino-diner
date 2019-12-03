@@ -9,20 +9,23 @@ namespace DinoDiner.Menu
     /// <summary>
     /// A class containing all availiable menu items
     /// </summary>
-    public class Menu
+    public static class Menu
     {
         /// <summary>
         /// A list of all the availiable menu items
         /// </summary>
-        public List<object> AvailableMenuItems
+        public static List<IMenuItem> AvailableMenuItems
         {
             get
             {
-                List<object> items = new List<object>();
-                items.Add(new JurassicJava());
-                items.Add(new Sodasaurus());
-                items.Add(new Tyrannotea());
-                items.Add(new Water());
+                List<IMenuItem> items = new List<IMenuItem>();
+                items.Add(new CretaceousCombo(new Brontowurst()));
+                items.Add(new CretaceousCombo(new DinoNuggets()));
+                items.Add(new CretaceousCombo(new PrehistoricPBJ()));
+                items.Add(new CretaceousCombo(new PterodactylWings()));
+                items.Add(new CretaceousCombo(new SteakosaurusBurger()));
+                items.Add(new CretaceousCombo(new TRexKingBurger()));
+                items.Add(new CretaceousCombo(new VelociWrap()));
 
                 items.Add(new Brontowurst());
                 items.Add(new DinoNuggets());
@@ -36,6 +39,11 @@ namespace DinoDiner.Menu
                 items.Add(new MeteorMacAndCheese());
                 items.Add(new MezzorellaSticks());
                 items.Add(new Triceritots());
+
+                items.Add(new JurassicJava());
+                items.Add(new Sodasaurus());
+                items.Add(new Tyrannotea());
+                items.Add(new Water());
                 return items;
             }
         }
@@ -43,11 +51,11 @@ namespace DinoDiner.Menu
         /// <summary>
         /// a list of all Entrees
         /// </summary>
-        public List<Entree> AvailableEntrees
+        public static List<IMenuItem> AvailableEntrees
         {
             get
             {
-                List<Entree> items = new List<Entree>();
+                List<IMenuItem> items = new List<IMenuItem>();
                 items.Add(new Brontowurst());
                 items.Add(new DinoNuggets());
                 items.Add(new PrehistoricPBJ());
@@ -62,11 +70,11 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all Sides
         /// </summary>
-        public List<Side> AvailableSides
+        public static List<IMenuItem> AvailableSides
         {
             get
             {
-                List<Side> items = new List<Side>();
+                List<IMenuItem> items = new List<IMenuItem>();
                 items.Add(new Fryceritops());
                 items.Add(new MeteorMacAndCheese());
                 items.Add(new MezzorellaSticks());
@@ -78,11 +86,11 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all Drinks
         /// </summary>
-        public List<Drink> AvailableDrinks
+        public static List<IMenuItem> AvailableDrinks
         {
             get
             {
-                List<Drink> items = new List<Drink>();
+                List<IMenuItem> items = new List<IMenuItem>();
                 items.Add(new JurassicJava());
                 items.Add(new Sodasaurus());
                 items.Add(new Tyrannotea());
@@ -94,7 +102,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// A list of all Combos
         /// </summary>
-        public List<IMenuItem> AvailalbeCombos
+        public static List<IMenuItem> AvailalbeCombos
         {
             get
             {
@@ -105,10 +113,27 @@ namespace DinoDiner.Menu
             }
         }
 
+
+        public static HashSet<string> PossibleIngredients
+        {
+            get
+            {
+                HashSet<string> result = new HashSet<string>();
+                foreach(IMenuItem item in AvailableMenuItems)
+                {
+                    foreach(string ingredient in item.Ingredients)
+                    {
+                        result.Add(ingredient);
+                    }
+                }
+                return result;
+            }
+        }
         /// <summary>
         /// overrides the ToString method
         /// </summary>
         /// <returns>Every item on the menu seperated by a newline</returns>
+/*
         public override string ToString()
         {
             string fullMenu = "";
@@ -119,5 +144,6 @@ namespace DinoDiner.Menu
             }
             return fullMenu;
         }
+        */
     }
 }

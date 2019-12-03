@@ -7,13 +7,15 @@ body {
 
 form {
     background-color: lightgray;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    width: 400px;
+    width: 200px;
 }
 
 table {
     border: solid gray 2px;
-    display: flex;
+    width: 600px;
 }
 
 th {    
@@ -33,10 +35,24 @@ th {
     flex-direction: row;    
 }
 
+.menu-category {
+    display: flex;
+    flex-direction: column;
+}
+
+#exclude-ingredients {
+    display: flex;
+    flex-direction: column;
+}
+
 #menu-container {
     display: flex;
     flex-direction: row;
-    width: 500px;
+}
+
+#results {
+    width: 600px;
+    margin: 10px;
 }
 
 #dino-img {
