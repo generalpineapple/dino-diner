@@ -9,35 +9,53 @@
     <div id="results">
         <div class="menu-item">
             <div id="combo-list">
-                <h2>Combos</h2>
-                <table>
-                    <tr>
-                        <th>Combos</th>
-                        <th>Price</th>
-                        <th>Calories</th>
-                        <th>Ingredients</th>
-                    </tr>
-                    @foreach (DinoDiner.Menu.IMenuItem item in Model.Menu)
-                    {
-                        if (item is DinoDiner.Menu.CretaceousCombo)
-                        {
+                @if (Model.Menu.OfType<DinoDiner.Menu.CretaceousCombo>().Count() != 0)
+                {
+                    <h2>Combos</h2>
+                    <table>
                         <tr>
-                            <th>@item.ToString()</th>
-                            <th>@String.Format("{0:0.00}", item.Price)</th>
-                            <th>@item.Calories</th>
-                            <th>
-                                @foreach (string ing in item.Ingredients)
-                                {@ing  <br />}
-                            </th>
+                            <th>Combos</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                            <th>Calories</th>
+                            <th>Ingredients</th>
                         </tr>
+                        @foreach (DinoDiner.Menu.IMenuItem item in Model.Menu)
+                        {
+                            if (item is DinoDiner.Menu.CretaceousCombo)
+                            {
+                                DinoDiner.Menu.CretaceousCombo combo = item as DinoDiner.Menu.CretaceousCombo;
+                                <tr>
+                                    <th rowspan="3">@combo.ToString()</th>
+                                    <th>Small</th>
+                                    <th>@String.Format("{0:0.00}", combo.Price)</th>
+                                    <th>@combo.Calories</th>
+                                    <th rowspan="3">
+                                        @foreach (string ing in combo.Ingredients)
+                                        {@ing <br />}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>@(combo.Size = DinoDiner.Menu.Size.Medium)</th>
+                                    <th>@String.Format("{0:0.00}", combo.Price)</th>
+                                    <th>@combo.Calories</th>
+                                </tr>                                
+                                <tr>
+                                    <th>@(combo.Size = DinoDiner.Menu.Size.Large)</th>
+                                    <th>@String.Format("{0:0.00}", combo.Price)</th>
+                                    <th>@combo.Calories</th>
+                                </tr>
+                            }
                         }
-                    }
-                </table>
+                    </table>
+                }
             </div>
 
 
             <div id="entree-list">
-                <h2>Entrees</h2>
+                @if (Model.Menu.OfType<DinoDiner.Menu.Entree>().Count() != 0)
+                {
+                    <h2>Entrees</h2>
                 <table>
                     <tr>
                         <th>Entree</th>
@@ -49,74 +67,108 @@
                     {
                         if (item is DinoDiner.Menu.Entree)
                         {
-                        <tr>
-                            <th>@item.ToString()</th>
-                            <th>@String.Format("{0:0.00}", item.Price)</th>
-                            <th>@item.Calories</th>
-                            <th>
-                                @foreach (string ing in item.Ingredients)
-                                {@ing <br />}
-                            </th>
-                        </tr>
+                            <tr>
+                                <th>@item.ToString()</th>
+                                <th>@String.Format("{0:0.00}", item.Price)</th>
+                                <th>@item.Calories</th>
+                                <th>
+                                    @foreach (string ing in item.Ingredients)
+                                    {@ing <br />}
+                                </th>
+                            </tr>
                         }
                     }
                 </table>
+                }
             </div>
 
 
             <div id="side-list">
-                <h2>Sides</h2>
-                <table>
-                    <tr>
-                        <th>Sides</th>
-                        <th>Price</th>
-                        <th>Calories</th>
-                        <th>Ingredients</th>
-                    </tr>
-                    @foreach (DinoDiner.Menu.IMenuItem item in Model.Menu)
-                    {
-                        if (item is DinoDiner.Menu.Side)
-                        {
+                @if (Model.Menu.OfType<DinoDiner.Menu.Side>().Count() != 0)
+                {
+                    <h2>Sides</h2>
+                    <table>
                         <tr>
-                            <th>@item.ToString()</th>
-                            <th>@String.Format("{0:0.00}", item.Price)</th>
-                            <th>@item.Calories</th>
-                            <th>
-                                @foreach (string ing in item.Ingredients)
-                                {@ing <br />}
-                            </th>
+                            <th>Sides</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                            <th>Calories</th>
+                            <th>Ingredients</th>
                         </tr>
+                        @foreach (DinoDiner.Menu.IMenuItem item in Model.Menu)
+                        {
+                            if (item is DinoDiner.Menu.Side)
+                            {
+                                DinoDiner.Menu.Side side = item as DinoDiner.Menu.Side;
+                                <tr>
+                                    <th rowspan="3">@side.ToString()</th>
+                                    <th>Small</th>
+                                    <th>@String.Format("{0:0.00}", side.Price)</th>
+                                    <th>@side.Calories</th>
+                                    <th rowspan="3">
+                                        @foreach (string ing in side.Ingredients)
+                                        {@ing <br />}
+                                    </th>
+                                </tr>                                
+                                <tr>
+                                    <th>@(side.Size = DinoDiner.Menu.Size.Medium)</th>
+                                    <th>@String.Format("{0:0.00}", side.Price)</th>
+                                    <th>@side.Calories</th>
+                                </tr>                                
+                                <tr>
+                                    <th>@(side.Size = DinoDiner.Menu.Size.Large)</th>
+                                    <th>@String.Format("{0:0.00}", side.Price)</th>
+                                    <th>@side.Calories</th>
+                                </tr>
+                            }
                         }
-                    }
-                </table>
+                    </table>
+                }
             </div>
 
 
             <div id="drink-list">
-                <h2>Drinks</h2>
-                <table>
-                    <tr>
-                        <th>Drinks</th>
-                        <th>Price</th>
-                        <th>Calories</th>
-                        <th>Ingredients</th>
-                    </tr>
-                    @foreach (DinoDiner.Menu.IMenuItem item in Model.Menu)
-                    {
-                        if (item is DinoDiner.Menu.Drink)
-                        {
+                @if (Model.Menu.OfType<DinoDiner.Menu.Drink>().Count() != 0)
+                {
+                    <h2>Drinks</h2>
+                    <table>
                         <tr>
-                            <th>@item.ToString()</th>
-                            <th>@String.Format("{0:0.00}", item.Price)</th>
-                            <th>@item.Calories</th>
-                            <th>
-                                @foreach (string ing in item.Ingredients)
-                                {@ing <br />}
-                            </th>
+                            <th>Drinks</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                            <th>Calories</th>
+                            <th>Ingredients</th>
                         </tr>
+                        @foreach (DinoDiner.Menu.IMenuItem item in Model.Menu)
+                        {
+                            if (item is DinoDiner.Menu.Drink)
+                            {
+                                DinoDiner.Menu.Drink drink = item as DinoDiner.Menu.Drink;
+                                <tr>
+                                    <th rowspan="3">@drink.ToString()</th>
+                                    <th>Small</th>
+                                    <th>@String.Format("{0:0.00}", drink.Price)</th>
+                                    <th>@drink.Calories</th>
+                                    <th rowspan="3">
+                                        @foreach (string ing in drink.Ingredients)
+                                        {@ing <br />}
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>@(drink.Size = DinoDiner.Menu.Size.Medium)</th>
+                                    <th>@String.Format("{0:0.00}", drink.Price)</th>
+                                    <th>@drink.Calories</th>
+                                </tr>
+
+                                <tr>
+                                    <th>@(drink.Size = DinoDiner.Menu.Size.Large)</th>
+                                    <th>@String.Format("{0:0.00}", drink.Price)</th>
+                                    <th>@drink.Calories</th>
+                                </tr>
+                            }
                         }
-                    }
-                </table>
+                    </table>
+                }
             </div>
         </div>
     </div>
